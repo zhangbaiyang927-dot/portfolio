@@ -78,8 +78,18 @@
     /* WORK HEADER */
     .work-head{margin-bottom:56px;}
 
-    /* CASE INTRO */
-    .case-intro{margin-bottom:0;}
+    /* CASE INTRO - 修改为网格布局，实现文字与图片左右排列 */
+    .case-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .case-intro-text {
+      display: flex;
+      flex-direction: column;
+    }
     .case-title{font-family:var(--sans);font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;letter-spacing:-.01em;max-width:760px;margin-bottom:28px;}
     .sticker-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:50px;}
     .sticker{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;border:1.4px solid var(--ink);padding:8px 16px;border-radius:40px;white-space:nowrap;}
@@ -87,6 +97,19 @@
     .sticker:nth-child(even){transform:rotate(1.8deg);}
     .case-cover{width:100%;border-radius:2px;overflow:hidden;margin-bottom:10px;}
     .case-cover img{width:100%;filter:grayscale(12%);}
+
+    @media (max-width:900px){
+      .case-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .case-intro-text {
+        order: 2;
+      }
+      .case-cover {
+        order: 1;
+      }
+    }
 
     /* TITLE CARD */
     .title-card{min-height:50svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px var(--pad);border-top:1px solid var(--line);}
@@ -270,13 +293,16 @@
       <h2 class="section-title">From Zero to One</h2>
     </div>
 
-    <div class="case-intro reveal">
-      <p class="case-title">从0到1：一场针对"价格敏感型新手"的IMC精准战役</p>
-      <div class="sticker-row">
-        <span class="sticker">整合营销</span>
-        <span class="sticker">新品上市</span>
-        <span class="sticker">全链路闭环</span>
-        <span class="sticker">B端渠道激活</span>
+    <!-- 案例介绍区域：文字与图片左右排列 -->
+    <div class="case-intro-grid reveal">
+      <div class="case-intro-text">
+        <p class="case-title">从0到1：一场针对"价格敏感型新手"的IMC精准战役</p>
+        <div class="sticker-row">
+          <span class="sticker">整合营销</span>
+          <span class="sticker">新品上市</span>
+          <span class="sticker">全链路闭环</span>
+          <span class="sticker">B端渠道激活</span>
+        </div>
       </div>
       <div class="case-cover">
         <img src="https://i.imgur.com/ykTRk7G.jpg" alt="Campaign visual"
@@ -460,8 +486,6 @@
           <div class="d-why"><strong>Why?</strong> This is a tasting event, not a sales event — the goal is relationship-building, not volume.</div>
         </div>
       </div>
-
-      <!-- 已删除图片 https://imgur.com/kS8f8M3 的代码块 -->
     </div>
   </div>
 
@@ -509,12 +533,7 @@
       </ul>
     </div>
 
-    <div class="row reveal" style="margin-bottom:0;padding-bottom:20px;">
-      <div class="row-media"><img src="https://i.imgur.com/jWln9J2.jpg" alt="Bot loyalty system"
-           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Bot System View 1</div>'"></div>
-      <div class="row-media"><img src="https://i.imgur.com/tN0JTbS.jpg" alt="Bot loyalty system"
-           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Bot System View 2</div>'"></div>
-    </div>
+    <!-- 已删除 https://imgur.com/Q7OoVpq 和 https://imgur.com/yZFPTNa 两张图片 -->
   </div>
 
   <!-- 06 -->
