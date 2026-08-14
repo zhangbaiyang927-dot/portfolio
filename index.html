@@ -1,1052 +1,597 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maddy Zhang · 作品集</title>
+  <title>Maddy Zhang — Brand &amp; Marketing Specialist</title>
+  <meta name="description" content="Maddy Zhang — Marketing Specialist. Brand Architecture, Creative Content, Storytelling, Art Direction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <style>
-    /* --- 全局重置 & 字体 --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #ffffff;
-      color: #1e1e1e;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      padding: 2rem 1.5rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 300;
-      letter-spacing: -0.02em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid #d0d0d0;
-      transition: border-color 0.2s ease;
-    }
-    a:hover {
-      border-bottom-color: #000000;
-    }
-
-    img, video {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* --- 首页 Hero --- */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: 1rem 0 3.5rem 0;
-    }
-
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #eaeaea;
-      margin-bottom: 1.8rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 250;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-      line-height: 1.1;
-    }
-
-    .hero-intro {
-      max-width: 720px;
-      margin: 1.2rem auto 0;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #2a2a2a;
-      text-align: left;
-    }
-
-    .hero-intro p {
-      margin-bottom: 1rem;
-    }
-
-    /* --- 滚动字幕 (技能) --- */
-    .skills-marquee {
-      margin: 3rem 0 3.5rem 0;
-      border-top: 1px solid #eaeaea;
-      border-bottom: 1px solid #eaeaea;
-      padding: 1.2rem 0;
-      overflow: hidden;
-      background: #fafafa;
-    }
-
-    .marquee-track {
-      display: flex;
-      gap: 2.5rem;
-      width: max-content;
-      animation: scrollMarquee 40s linear infinite;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #1e1e1e;
-      font-weight: 300;
-    }
-
-    .marquee-track span {
-      white-space: nowrap;
-    }
-    .marquee-track .separator {
-      opacity: 0.25;
-      font-weight: 200;
-    }
-
-    .skills-marquee:hover .marquee-track {
-      animation-play-state: paused;
-    }
-
-    @keyframes scrollMarquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* --- 通用标题 --- */
-    .section-title {
-      font-size: 2.4rem;
-      font-weight: 250;
-      letter-spacing: -0.02em;
-      margin: 4rem 0 0.25rem 0;
-    }
-
-    .section-sub {
-      font-size: 1rem;
-      font-weight: 300;
-      color: #666;
-      margin-bottom: 2.2rem;
-      letter-spacing: 0.02em;
-    }
-
-    /* --- 案例：IMC 战役 --- */
-    .imc-case {
-      margin: 2rem 0 4rem 0;
-    }
-
-    /* 案例头部 */
-    .case-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 1.5rem;
-    }
-
-    .case-header h2 {
-      font-size: 2.2rem;
-      font-weight: 250;
-      letter-spacing: -0.02em;
-      max-width: 700px;
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #f0f0f0;
-      padding: 0.2rem 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      border-radius: 20px;
-      color: #333;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    .case-header .cover-img {
-      width: 100%;
-      max-width: 300px;
-      border: 1px solid #eaeaea;
-      background: #f5f5f5;
-      margin-top: 1rem;
-    }
-
-    /* 内容模块 */
-    .module {
-      margin: 3.5rem 0;
-    }
-
-    .module-title {
-      font-size: 1.8rem;
-      font-weight: 250;
-      letter-spacing: -0.02em;
-      color: #1e1e1e;
-      margin-bottom: 0.5rem;
-    }
-
-    .module-title .num {
-      color: #ccc;
-      font-weight: 200;
-      margin-right: 0.5rem;
-    }
-
-    .module-sub {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 1.8rem;
-      border-left: 3px solid #ddd;
-      padding-left: 1.2rem;
-      font-style: italic;
-    }
-
-    /* 洞察区：双栏 */
-    .insight-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .insight-card {
-      background: #f7f7f7;
-      padding: 1.8rem 2rem;
-      border-radius: 4px;
-    }
-
-    .insight-card h4 {
-      font-weight: 400;
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .insight-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .insight-card ul li {
-      padding: 0.2rem 0 0.2rem 1.2rem;
-      position: relative;
-      font-weight: 300;
-      font-size: 0.95rem;
-    }
-
-    .insight-card ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #999;
-    }
-
-    .conclusion-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 2rem 0;
-      padding: 1.5rem 0;
-      border-top: 1px solid #eaeaea;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .conclusion-block .left {
-      font-weight: 400;
-      font-size: 1.05rem;
-    }
-
-    .conclusion-block .right {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      color: #444;
-      flex-wrap: wrap;
-    }
-
-    .conclusion-block .right .arrow {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-
-    /* 策略图：三层逻辑 */
-    .strategy-table {
-      margin: 1.5rem 0;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    .strategy-table tr {
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .strategy-table td {
-      padding: 1rem 0.5rem;
-      font-weight: 300;
-      vertical-align: top;
-    }
-
-    .strategy-table td:first-child {
-      font-weight: 400;
-      width: 15%;
-      color: #1e1e1e;
-    }
-
-    .strategy-table td:last-child {
-      color: #555;
-    }
-
-    .reason-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .reason-item {
-      background: #f7f7f7;
-      padding: 1.2rem 1.5rem;
-      border-radius: 4px;
-      text-align: center;
-    }
-
-    .reason-item .label {
-      font-weight: 400;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .reason-item .desc {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* 线上矩阵：双栏 */
-    .matrix-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .matrix-card {
-      background: #f7f7f7;
-      padding: 1.8rem 2rem;
-      border-radius: 4px;
-    }
-
-    .matrix-card h4 {
-      font-weight: 400;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .matrix-card .divider {
-      border-top: 1px solid #ddd;
-      margin: 0.8rem 0;
-    }
-
-    .matrix-card .sub {
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: #1e1e1e;
-      margin-top: 0.5rem;
-    }
-
-    .matrix-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .matrix-card ul li {
-      padding: 0.2rem 0 0.2rem 1.2rem;
-      position: relative;
-      font-weight: 300;
-      font-size: 0.95rem;
-    }
-
-    .matrix-card ul li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: #bbb;
-    }
-
-    .matrix-card .highlight {
-      background: #eee;
-      padding: 0.2rem 0.8rem;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 400;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
-    /* 线下联动 */
-    .offline-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .offline-grid .text-block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .offline-grid .text-block h4 {
-      font-weight: 400;
-      font-size: 1.2rem;
-      margin: 1rem 0 0.3rem;
-    }
-
-    .offline-grid .text-block ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .offline-grid .text-block ul li {
-      padding: 0.2rem 0 0.2rem 1.2rem;
-      position: relative;
-      font-weight: 300;
-      font-size: 0.95rem;
-    }
-
-    .offline-grid .text-block ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #999;
-    }
-
-    .decision-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .decision-item {
-      background: #f7f7f7;
-      padding: 1.5rem;
-      border-radius: 4px;
-    }
-
-    .decision-item .num {
-      font-weight: 400;
-      font-size: 1.2rem;
-      color: #bbb;
-      display: block;
-      margin-bottom: 0.3rem;
-    }
-
-    .decision-item h4 {
-      font-weight: 400;
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .decision-item p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* 闭环机制 */
-    .loop-flow {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin: 2rem 0;
-      padding: 1.5rem 0;
-      border-top: 1px solid #eaeaea;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .loop-node {
-      text-align: center;
-      flex: 1;
-      min-width: 100px;
-    }
-
-    .loop-node .dot {
-      display: block;
-      width: 12px;
-      height: 12px;
-      background: #1e1e1e;
-      border-radius: 50%;
-      margin: 0 auto 0.5rem;
-    }
-
-    .loop-node .action {
-      font-weight: 400;
-      font-size: 0.95rem;
-    }
-
-    .loop-node .reward {
-      font-size: 0.8rem;
-      color: #777;
-    }
-
-    .loop-arrow {
-      font-size: 1.5rem;
-      color: #ccc;
-      flex-shrink: 0;
-    }
-
-    .dual-account {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .dual-account .item {
-      background: #f7f7f7;
-      padding: 1.2rem 1.8rem;
-      border-radius: 4px;
-    }
-
-    .dual-account .item h4 {
-      font-weight: 400;
-      font-size: 1.1rem;
-    }
-
-    .dual-account .item p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* 成果区 */
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .result-item {
-      text-align: center;
-      padding: 1.5rem 0.5rem;
-      border: 1px solid #eaeaea;
-      border-radius: 4px;
-    }
-
-    .result-item .number {
-      font-size: 2.6rem;
-      font-weight: 200;
-      letter-spacing: -0.02em;
-      color: #1e1e1e;
-    }
-
-    .result-item .label {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 0.2rem;
-      display: block;
-    }
-
-    .result-item .sub {
-      font-size: 0.7rem;
-      color: #aaa;
-      display: block;
-      margin-top: 0.2rem;
-    }
-
-    .results-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.95rem;
-    }
-
-    .results-table th {
-      text-align: left;
-      font-weight: 400;
-      color: #1e1e1e;
-      border-bottom: 2px solid #1e1e1e;
-      padding: 0.8rem 0.5rem;
-    }
-
-    .results-table td {
-      padding: 0.8rem 0.5rem;
-      border-bottom: 1px solid #eaeaea;
-      font-weight: 300;
-      color: #333;
-    }
-
-    .results-table td:last-child {
-      color: #555;
-      font-size: 0.9rem;
-    }
-
-    .conclusion-quote {
-      margin: 2rem 0 1rem;
-      padding: 1.5rem 2rem;
-      border-left: 3px solid #1e1e1e;
-      font-style: italic;
-      color: #444;
-      background: #fafafa;
-    }
-
-    /* 图片占位 */
-    .img-placeholder {
-      background: #f0f0f0;
-      border: 1px solid #eaeaea;
-      border-radius: 4px;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .img-placeholder img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .img-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 0.8rem;
-      margin: 1rem 0;
-    }
-
-    /* 联系方式 */
-    .contact-section {
-      margin: 4rem 0 2rem 0;
-      padding-top: 2.5rem;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .contact-section h2 {
-      font-size: 2rem;
-      font-weight: 250;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.8rem;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.8rem 3.5rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: baseline;
-      gap: 0.6rem;
-    }
-
-    .contact-item .label {
-      font-weight: 400;
-      color: #000;
-      min-width: 70px;
-    }
-
-    .contact-item a {
-      border-bottom: 1px solid #ccc;
-      word-break: break-all;
-    }
-
-    /* 响应式 */
-    @media (max-width: 860px) {
-      .insight-grid, .conclusion-block, .matrix-grid, .offline-grid, .dual-account {
-        grid-template-columns: 1fr;
-      }
-      .reason-row, .decision-grid, .results-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .case-header {
-        flex-direction: column;
-      }
-      .case-header .cover-img {
-        max-width: 100%;
-      }
-      .loop-flow {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .loop-arrow {
-        transform: rotate(90deg);
-      }
-      .hero h1 {
-        font-size: 3rem;
-      }
-      .module-title {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 520px) {
-      body {
-        padding: 1rem 0.8rem;
-      }
-      .reason-row, .decision-grid, .results-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-grid {
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-      .result-item .number {
-        font-size: 2rem;
-      }
-    }
-
-    .footer-note {
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
-      color: #aaa;
-      border-top: 1px solid #f0f0f0;
-      padding-top: 1.5rem;
-      text-align: center;
-    }
+    :root{
+      --bg:#ffffff;--bg-alt:#f5f5f4;--ink:#1e1e1e;--ink-soft:#6e6e6b;--ink-faint:#aaaaaa;
+      --line:#e2e2dd;--max:1240px;--pad:6vw;
+      --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --serif:'Bodoni Moda', 'Times New Roman', serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;font-weight:300;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    ul{list-style:none;}
+    strong{font-weight:600;}
+    .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+    ::selection{background:var(--ink);color:var(--bg);}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1);}
+    .reveal.in{opacity:1;transform:translateY(0);}
+
+    /* NAV */
+    header.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px var(--pad);mix-blend-mode:difference;color:#fff;}
+    .nav-left{display:flex;align-items:center;gap:22px;}
+    .nav-left .mark{font-size:13px;letter-spacing:.14em;font-weight:600;text-transform:uppercase;}
+    .nav-left .cta{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.75;border-bottom:1px solid currentColor;padding-bottom:2px;}
+    .nav-symbol{font-size:13px;letter-spacing:.3em;opacity:.55;justify-self:center;}
+    .nav-right{display:flex;gap:30px;justify-self:end;}
+    .nav-right a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;display:inline-block;transition:transform .3s cubic-bezier(.16,1,.3,1);}
+    .nav-right a:hover{transform:scale(1.28);}
+    @media (max-width:900px){.nav-left .cta{display:none;}.nav-right{display:none;}.nav-symbol{display:none;}header.site-nav{grid-template-columns:1fr;}}
+
+    /* HERO */
+    .hero{min-height:100svh;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:stretch;padding-top:90px;}
+    .hero-left{display:flex;flex-direction:column;justify-content:space-between;padding:40px var(--pad) 60px;}
+    .hero-eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:18px;}
+    .hero-name{font-family:var(--sans);font-weight:700;font-size:clamp(3rem, 8.2vw, 7.2rem);line-height:.95;letter-spacing:-.02em;}
+    .hero-role{margin-top:22px;font-size:14px;color:var(--ink-soft);max-width:360px;line-height:1.6;}
+    .hero-keywords{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.5;color:var(--ink);}
+    .hero-keywords span{display:block;}
+    .hero-keywords span::before{content:'— ';color:var(--ink-faint);font-style:normal;}
+    .hero-right{position:relative;overflow:hidden;background:var(--bg-alt);}
+    .hero-right img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(15%);}
+    .fallback-full{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);}
+    .fallback-box{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+
+    /* MARQUEE */
+    .marquee-section{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;}
+    .marquee-track{display:flex;width:max-content;animation:scroll-left 42s linear infinite;}
+    .marquee-section:hover .marquee-track{animation-play-state:paused;}
+    .marquee-track span.item{font-family:var(--sans);font-weight:500;font-size:clamp(1rem,2vw,1.35rem);text-transform:uppercase;letter-spacing:.04em;padding:0 28px;white-space:nowrap;color:var(--ink);}
+    .marquee-track span.dot{color:var(--ink-faint);font-weight:400;}
+    @keyframes scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+    section{padding:110px 0;}
+    .sec-alt{background:var(--bg-alt);}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;}
+    h2.section-title{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;letter-spacing:-.01em;line-height:1.05;}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;}
+    .about-photo{width:100%;overflow:hidden;border-radius:2px;}
+    .about-photo img{width:100%;filter:grayscale(20%);}
+    .about-text{font-size:16px;line-height:1.85;color:var(--ink-soft);}
+    .about-text p{margin-bottom:22px;}
+    .about-name{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ink);margin-bottom:22px;}
+    @media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+
+    /* WORK HEADER */
+    .work-head{margin-bottom:56px;}
+
+    /* CASE INTRO */
+    .case-intro{margin-bottom:0;}
+    .case-title{font-family:var(--sans);font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;letter-spacing:-.01em;max-width:760px;margin-bottom:28px;}
+    .sticker-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:50px;}
+    .sticker{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;border:1.4px solid var(--ink);padding:8px 16px;border-radius:40px;white-space:nowrap;}
+    .sticker:nth-child(odd){transform:rotate(-2.2deg);}
+    .sticker:nth-child(even){transform:rotate(1.8deg);}
+    .case-cover{width:100%;border-radius:2px;overflow:hidden;margin-bottom:10px;}
+    .case-cover img{width:100%;filter:grayscale(12%);}
+
+    /* TITLE CARD */
+    .title-card{min-height:50svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px var(--pad);border-top:1px solid var(--line);}
+    .title-card .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(4rem,11vw,8.5rem);line-height:1;color:var(--ink);}
+    .title-card .q{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:400;color:var(--ink-soft);margin-top:16px;max-width:620px;}
+
+    .row{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;margin-bottom:90px;}
+    .row:last-child{margin-bottom:0;}
+    .row.reverse{grid-template-columns:1.15fr 0.85fr;}
+    .row img{width:100%;border-radius:2px;filter:grayscale(12%);}
+    .pull-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.4;color:var(--ink);margin-bottom:26px;}
+    .body-copy{font-size:15.5px;line-height:1.85;color:var(--ink-soft);}
+    .body-copy p{margin-bottom:18px;}
+    .barrier-list{margin-top:18px;}
+    .barrier-list li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:12px;padding-left:20px;position:relative;}
+    .barrier-list li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+    .block-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px;}
+
+    .flow-chain{display:flex;align-items:stretch;gap:0;width:100%;}
+    .flow-box{flex:1;border:1px solid var(--line);padding:26px 20px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);text-align:center;display:flex;align-items:center;justify-content:center;}
+    .flow-box b{display:block;color:var(--ink);font-weight:600;font-size:14px;margin-bottom:6px;}
+    .flow-arrow{flex:0 0 46px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:20px;}
+    @media (max-width:700px){.flow-chain{flex-direction:column;}.flow-arrow{transform:rotate(90deg);padding:8px 0;}
+      .row{grid-template-columns:1fr;gap:34px;}.row.reverse{grid-template-columns:1fr;}.row.reverse .row-media{order:-1;}}
+
+    .one-liner{text-align:center;padding:0 0 70px;}
+    .one-liner .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:20px;}
+    .one-liner .stmt{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3.6vw,2.6rem);color:var(--ink);max-width:760px;margin:0 auto;line-height:1.35;}
+
+    .funnel{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:80px;}
+    .funnel-tier{border:1px solid var(--line);padding:26px 34px;text-align:center;}
+    .funnel-tier:nth-child(1){width:100%;}
+    .funnel-tier:nth-child(3){width:82%;}
+    .funnel-tier:nth-child(5){width:64%;}
+    .funnel-tier .tier-name{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);margin-bottom:6px;}
+    .funnel-tier .tier-logic{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
+    .funnel-tier .tier-action{font-size:14px;color:var(--ink-soft);line-height:1.55;max-width:480px;margin:0 auto;}
+    .funnel-connector{padding:10px 0;color:var(--ink-faint);font-size:18px;}
+    @media (max-width:700px){.funnel-tier:nth-child(1),.funnel-tier:nth-child(3),.funnel-tier:nth-child(5){width:100%;}}
+    .why-order{max-width:760px;margin:0 auto;}
+    .why-order li{font-size:14.5px;line-height:1.75;color:var(--ink-soft);margin-bottom:14px;padding-left:20px;position:relative;text-align:left;}
+    .why-order li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+
+    .matrix-block{margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--line);}
+    .matrix-block:last-of-type{border-bottom:none;}
+    .matrix-head{font-size:1.3rem;font-weight:700;margin-bottom:18px;letter-spacing:-.01em;}
+    .matrix-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
+    .matrix-grid .what p{font-size:14.5px;color:var(--ink-soft);line-height:1.7;}
+    .matrix-grid .why li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:10px;padding-left:20px;position:relative;}
+    .matrix-grid .why li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+    .key-detail{margin-top:18px;font-size:13.5px;color:var(--ink);background:var(--bg-alt);padding:14px 18px;border-left:2px solid var(--ink);}
+    .sec-alt .key-detail{background:var(--bg);}
+    @media (max-width:800px){.matrix-grid{grid-template-columns:1fr;gap:22px;}}
+
+    .gallery-strip{display:flex;gap:2px;overflow-x:auto;margin-top:20px;background:var(--line);}
+    .gallery-strip .g-img{flex:0 0 220px;aspect-ratio:4/5;background:var(--bg-alt);position:relative;overflow:hidden;}
+    .gallery-strip .g-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);}
+    .gallery-strip .g-img .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:center;padding:10px;}
+
+    .reason-list{margin-top:16px;}
+    .reason-list li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:12px;padding-left:20px;position:relative;}
+    .reason-list li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+    .decision{border-top:1px solid var(--line);padding:26px 0;}
+    .decision:last-child{border-bottom:1px solid var(--line);}
+    .decision .d-title{font-weight:600;font-size:15px;margin-bottom:8px;}
+    .decision .d-why{font-size:14px;color:var(--ink-soft);line-height:1.7;}
+
+    .loop-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;margin-bottom:70px;}
+    .loop-svg{width:100%;max-width:340px;margin:0 auto;display:block;}
+    .loop-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+    .loop-card{border:1px solid var(--line);padding:20px;}
+    .loop-card .lc-num{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--ink-faint);margin-bottom:8px;}
+    .loop-card .lc-action{font-weight:600;font-size:13.5px;margin-bottom:4px;}
+    .loop-card .lc-feedback{font-size:12.5px;color:var(--ink-soft);margin-bottom:4px;}
+    .loop-card .lc-value{font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+    @media (max-width:800px){.loop-wrap{grid-template-columns:1fr;}.loop-cards{grid-template-columns:1fr;}}
+
+    .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);}
+    .stat-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 22px;}
+    .stat-card:last-child{border-right:none;}
+    .stat-card .s-num{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);margin-bottom:10px;line-height:1.1;}
+    .stat-card .s-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px;}
+    .stat-card .s-mean{font-size:12.5px;color:var(--ink-faint);line-height:1.6;}
+    @media (max-width:900px){.stat-grid{grid-template-columns:1fr 1fr;}.stat-card:nth-child(2n){border-right:none;}}
+    @media (max-width:520px){.stat-grid{grid-template-columns:1fr;}.stat-card{border-right:none !important;}}
+
+    /* HIGHLIGHTS */
+    .highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
+    .h-col{padding:36px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+    .h-col:last-child{border-right:none;}
+    .h-col .h-index{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--ink-faint);margin-bottom:18px;display:block;}
+    .h-col h3{font-size:15px;letter-spacing:.02em;text-transform:uppercase;font-weight:600;margin-bottom:20px;}
+    .h-col ul li{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;padding-left:16px;position:relative;}
+    .h-col ul li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+    @media (max-width:900px){.highlights-grid{grid-template-columns:1fr;}.h-col{border-right:none;}}
+
+    /* CONTACT */
+    .contact{text-align:center;padding-top:130px;padding-bottom:80px;}
+    .contact h2{font-size:clamp(2rem,5.6vw,3.8rem);font-weight:700;letter-spacing:-.02em;margin-bottom:56px;}
+    .contact-list{display:flex;flex-direction:column;align-items:center;max-width:520px;margin:0 auto;}
+    .contact-item{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:22px 0;border-top:1px solid var(--line);font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;transition:opacity .25s ease;}
+    .contact-list .contact-item:last-child{border-bottom:1px solid var(--line);}
+    .contact-item:hover{opacity:.55;}
+    .contact-item .ic{width:16px;height:16px;flex-shrink:0;}
+    footer{border-top:1px solid var(--line);padding:26px var(--pad);display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;min-height:auto;}
+      .hero-right{height:56vh;order:-1;}
+      .hero-left{padding:36px var(--pad) 44px;gap:30px;}
+      section{padding:74px 0;}
+      .title-card{min-height:38svh;padding:56px var(--pad);}
+    }
+    @media (max-width:520px){header.site-nav{padding:20px var(--pad);}}
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- ========== HERO ========== -->
-  <div class="hero">
-    <img class="avatar" src="https://i.imgur.com/aiiMK0a.png" alt="Maddy Zhang" onerror="this.style.background='#e0e0e0'; this.alt='Maddy Zhang'">
-    <h1>Maddy Zhang</h1>
-    <div class="hero-intro">
-      <p>你好，我是Maddy Zhang。<br>一名对市场营销充满热情的学习者与实践者。我相信，营销不只是技术或策略，更是一种理解人、连接人的方式。</p>
-      <p>我始终保持开放心态，乐于拥抱新事物——无论是通过撰写文章、制作视频、参与项目，还是在线下会议、展览中与来自不同领域的人交流，我都能从中获得新的视角与灵感。</p>
-      <p>工作之外，我是音乐、旅行和摄影的爱好者。我热衷于捕捉生活中那些能激发创造力与美感的瞬间。我始终相信，好的想法往往诞生于观察与对话之中——当你把自己置于多元文化的交汇点，让不同观点碰撞，好奇心与包容心便会自然生长。</p>
-      <p>我随时准备好迎接新的机遇，也期待与更多志同道合的人相遇。</p>
+<header class="site-nav">
+  <div class="nav-left">
+    <a href="#home" class="mark">Maddy Zhang</a>
+    <a href="#contact" class="cta">Get in touch</a>
+  </div>
+  <div class="nav-symbol">◆</div>
+  <nav class="nav-right">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div>
+      <div class="hero-eyebrow">Marketing Specialist</div>
+      <h1 class="hero-name">Maddy<br>Zhang</h1>
+      <p class="hero-role">Marketing strategist working across brand, channel and content — building clarity and momentum for consumer brands entering complex regional markets.</p>
+    </div>
+    <div class="hero-keywords">
+      <span>Brand Architecture</span>
+      <span>Creative Content</span>
+      <span>Storytelling</span>
+      <span>Art Direction</span>
     </div>
   </div>
+  <div class="hero-right">
+    <img src="https://i.imgur.com/aiiMK0a.jpg" alt="Maddy Zhang portrait"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <div class="fallback-full">Portrait Image</div>
+  </div>
+</section>
 
-  <!-- ========== MARQUEE ========== -->
-  <div class="skills-marquee">
-    <div class="marquee-track" id="marqueeTrack">
-      <span>团队合作</span><span class="separator">·</span>
-      <span>统筹</span><span class="separator">·</span>
-      <span>跨文化沟通</span><span class="separator">·</span>
-      <span>问题解决</span><span class="separator">·</span>
-      <span>规划</span><span class="separator">·</span>
-      <span>Google Analytics</span><span class="separator">·</span>
-      <span>Telegram</span><span class="separator">·</span>
-      <span>HubSpot</span><span class="separator">·</span>
-      <span>Tableau</span><span class="separator">·</span>
-      <span>Claude</span><span class="separator">·</span>
-      <span>Vape Club Show</span><span class="separator">·</span>
-      <span>店员培训</span><span class="separator">·</span>
-      <span>门店路演</span><span class="separator">·</span>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="https://i.imgur.com/jN50Pt0.jpg" alt="Maddy Zhang"
+           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Portrait Photo</div>'">
+    </div>
+    <div class="about-text reveal">
+      <div class="about-name">Hi, I'm Maddy Zhang.</div>
+      <p>A marketer driven by curiosity and grounded in practice. I believe marketing is never only about tactics or strategy — at its core, it's a way of understanding people and building real connection.</p>
+      <p>I stay open to new ideas, through writing, filmmaking, and project work, through conferences and exhibitions, meeting people from different fields and letting their perspectives sharpen my own.</p>
+      <p>Outside of work, I'm a devoted lover of music, travel and photography, always chasing the small moments that spark creativity and beauty. I believe the best ideas are born from observation and conversation.</p>
+      <p>When you stand at the intersection of cultures and let different viewpoints collide, curiosity and openness grow naturally. I'm always ready for the next opportunity — and always glad to meet people who share the same drive.</p>
     </div>
   </div>
+</section>
 
-  <!-- ========== IMC CASE ========== -->
-  <div class="imc-case">
-
-    <!-- 案例头部 -->
-    <div class="case-header">
-      <div>
-        <h2>从0到1：一场针对"价格敏感型新手"的IMC精准战役</h2>
-        <div class="case-tags">
-          <span class="tag">整合营销</span>
-          <span class="tag">新品上市</span>
-          <span class="tag">全链路闭环</span>
-          <span class="tag">B端渠道激活</span>
-        </div>
-      </div>
-      <div class="cover-img img-placeholder">
-        <img src="https://imgur.com/ykTRk7G.jpg" alt="IMC 战役封面" onerror="this.style.background='#eaeaea'; this.alt='封面图'">
-      </div>
-    </div>
-
-    <!-- 01 为什么做这件事 -->
-    <div class="module">
-      <div class="module-title"><span class="num">01 /</span> 为什么做这件事？</div>
-      <div class="module-sub">「这个市场不缺好产品，缺的是让用户敢尝试的理由。」</div>
-
-      <div class="img-placeholder" style="margin-bottom:1.5rem;">
-        <img src="https://imgur.com/xvZPZmT.jpg" alt="市场洞察图" onerror="this.style.background='#eaeaea'; this.alt='洞察图'">
-      </div>
-
-      <p style="margin-bottom:1.5rem;">俄罗斯烟草替代品市场正处于高速增长但心智混乱的阶段。主流品牌集中在"高端性能"赛道，用复杂参数和高端定价争夺存量玩家，却忽视了最大的增量群体：<br><strong>价格敏感型新手用户</strong>——他们想尝试新型烟草产品，但被两个门槛挡住：</p>
-
-      <div class="insight-grid">
-        <div class="insight-card">
-          <h4>🧠 认知门槛</h4>
-          <ul>
-            <li>看不懂参数</li>
-            <li>分不清品类</li>
-            <li>不知道"什么适合我"</li>
-          </ul>
-        </div>
-        <div class="insight-card">
-          <h4>💰 价格门槛</h4>
-          <ul>
-            <li>不愿为"不确定是否喜欢"的产品支付高价</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="conclusion-block">
-        <div class="left">
-          <strong>结论：</strong>我们品牌资产集中在"技术创新"，但在大众认知中缺乏"亲和力"。这款产品的使命不是做一款低价产品，而是成为品牌与新用户之间的"第一触点"。
-        </div>
-        <div class="right">
-          <span>先用低价消除决策风险</span>
-          <span class="arrow">→</span>
-          <span>再用产品力建立信任</span>
-          <span class="arrow">→</span>
-          <span>最后用Bot体系沉淀长期价值</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 策略框架 -->
-    <div class="module">
-      <div class="module-title"><span class="num">02 /</span> 策略框架</div>
-      <div class="module-sub">「用一次低成本的尝试，换一个长期的用户。」</div>
-
-      <table class="strategy-table">
-        <tr><td>表层</td><td>价格驱动</td><td>首发价 + 赠品，降低首次尝试的心理门槛</td></tr>
-        <tr><td>中层</td><td>体验驱动</td><td>门店路演 + 品鉴会，让"看"变成"试"</td></tr>
-        <tr><td>深层</td><td>关系驱动</td><td>Bot积分体系，把"一次购买"变成"持续连接"</td></tr>
-      </table>
-
-      <div style="margin-top:1.5rem; font-weight:400;">为什么是这个顺序？</div>
-      <div class="reason-row">
-        <div class="reason-item"><span class="label">价格是 hook</span><span class="desc">没有低价，目标用户根本不会注意到你</span></div>
-        <div class="reason-item"><span class="label">体验是转化器</span><span class="desc">只有摸到、试到，用户才会相信"低价≠低质"</span></div>
-        <div class="reason-item"><span class="label">关系是护城河</span><span class="desc">竞品可以复制价格，但复制不了已沉淀的用户习惯</span></div>
-      </div>
-    </div>
-
-    <!-- 03 线上矩阵 -->
-    <div class="module">
-      <div class="module-title"><span class="num">03 /</span> 线上矩阵</div>
-      <div class="module-sub">不是"发内容"，是"设计旅程"</div>
-
-      <div class="matrix-grid">
-        <div class="matrix-card">
-          <h4>💬 Telegram / 品牌 Bot</h4>
-          <div class="divider"></div>
-          <div class="sub">做了什么：</div>
-          <p style="font-weight:300; margin-bottom:0.5rem;">首发专属优惠券 + 抽奖机制 + 小票上传引导</p>
-          <div class="sub">为什么这样做：</div>
-          <ul>
-            <li>优惠券解决的是"用户为什么现在买"</li>
-            <li>抽奖解决的是"用户为什么愿意分享"</li>
-            <li>小票上传解决的是"如何把线下购买者变成线上可触达用户"</li>
-          </ul>
-          <div class="highlight">关键细节：优惠券设置7天有效期，制造轻微紧迫感，避免"先收藏再说"</div>
-        </div>
-        <div class="matrix-card">
-          <h4>📱 社交媒体（TG / YOUTUBE）</h4>
-          <div class="divider"></div>
-          <div class="sub">做了什么：</div>
-          <p style="font-weight:300; margin-bottom:0.5rem;">统一话题标签 #XLIMGOLITE + KOL开箱 + KOC晒单</p>
-          <div class="sub">为什么这样做：</div>
-          <ul>
-            <li>KOL负责"种草"——展示产品在真实场景中的使用，解决"这个东西到底怎么样"</li>
-            <li>KOC负责"背书"——普通用户的真实反馈比KOL更有说服力，解决"是不是广告"</li>
-            <li>统一标签——让所有内容可被聚合、可被追踪，也为后续用户自发内容预留入口</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 图片行 -->
-      <div class="img-row">
-        <div class="img-placeholder"><img src="https://imgur.com/MkowI0T.jpg" alt="社交素材1" onerror="this.style.background='#eaeaea'"></div>
-        <div class="img-placeholder"><img src="https://imgur.com/RysdfgT.jpg" alt="社交素材2" onerror="this.style.background='#eaeaea'"></div>
-        <div class="img-placeholder"><img src="https://imgur.com/nUe1mw0.jpg" alt="社交素材3" onerror="this.style.background='#eaeaea'"></div>
-        <div class="img-placeholder"><img src="https://imgur.com/q4LssnT.jpg" alt="社交素材4" onerror="this.style.background='#eaeaea'"></div>
-        <div class="img-placeholder"><img src="https://imgur.com/IejyBm8.jpg" alt="社交素材5" onerror="this.style.background='#eaeaea'"></div>
-      </div>
-    </div>
-
-    <!-- 04 线下联动 -->
-    <div class="module">
-      <div class="module-title"><span class="num">04 /</span> 线下联动：B2B2C的精准渗透</div>
-      <div class="module-sub">「不是让B端帮品牌卖货，而是帮B端更好地服务他们的客户。」</div>
-
-      <div class="offline-grid">
-        <div class="img-placeholder">
-          <img src="https://imgur.com/Rci1RJT.jpg" alt="MAVERICK 活动" onerror="this.style.background='#eaeaea'">
-        </div>
-        <div class="text-block">
-          <h4>MAVERICK & OXVA Tasting Event 的启发</h4>
-          <p>MAVERICK 有门店资源但缺品牌认知，OXVA 有成熟产品但缺区域渗透——这是一场优势互换。</p>
-          <h4 style="margin-top:1rem;">为什么选新西伯利亚？</h4>
-          <ul>
-            <li>不是一线城市（莫斯科/圣彼得堡），市场竞争没那么激烈</li>
-            <li>区域市场用户对"新品牌"接受度高，品牌有机会先入为主</li>
-            <li>MAVERICK 在当地有扎实的门店网络</li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="margin-top:1.5rem; font-weight:400;">关键决策</div>
-      <div class="decision-grid">
-        <div class="decision-item">
-          <span class="num">01</span>
-          <h4>只面向B端</h4>
-          <p>品鉴会只面向销售人员、门店经营者、经销商，不直接面向C端。<br><strong>为什么？</strong> B端是杠杆。影响1个门店主 = 影响他背后几百个日常进店用户。</p>
-        </div>
-        <div class="decision-item">
-          <span class="num">02</span>
-          <h4>五城巡回</h4>
-          <p>五城巡回，每城只办一场。<br><strong>为什么？</strong> 制造稀缺性，让被邀请的人觉得"被重视"，形成口碑传播。</p>
-        </div>
-        <div class="decision-item">
-          <span class="num">03</span>
-          <h4>现场不销售</h4>
-          <p>现场只体验，不直接销售。<br><strong>为什么？</strong> 这是品鉴会，不是促销会。目标是建立合作关系，不是冲销量。</p>
-        </div>
-      </div>
-
-      <div class="img-placeholder" style="margin-top:1.5rem;">
-        <img src="https://imgur.com/kS8f8M3.jpg" alt="路演现场" onerror="this.style.background='#eaeaea'">
-      </div>
-    </div>
-
-    <!-- 05 闭环机制 -->
-    <div class="module">
-      <div class="module-title"><span class="num">05 /</span> 闭环机制：为什么这套体系能持续运转？</div>
-      <div class="module-sub">「用户每一次主动行为，都应该获得即时反馈。」</div>
-
-      <!-- 流程图 -->
-      <div class="loop-flow">
-        <div class="loop-node">
-          <span class="dot"></span>
-          <div class="action">首次购买</div>
-          <div class="reward">低价 + 赠品</div>
-          <div class="reward" style="color:#999;">→ 进入品牌私域池</div>
-        </div>
-        <span class="loop-arrow">→</span>
-        <div class="loop-node">
-          <span class="dot"></span>
-          <div class="action">上传小票</div>
-          <div class="reward">积分奖励</div>
-          <div class="reward" style="color:#999;">→ 养成回访习惯</div>
-        </div>
-        <span class="loop-arrow">→</span>
-        <div class="loop-node">
-          <span class="dot"></span>
-          <div class="action">社交分享</div>
-          <div class="reward">抽奖机会</div>
-          <div class="reward" style="color:#999;">→ 带来新用户</div>
-        </div>
-        <span class="loop-arrow">→</span>
-        <div class="loop-node">
-          <span class="dot"></span>
-          <div class="action">复购</div>
-          <div class="reward">积分翻倍</div>
-          <div class="reward" style="color:#999;">→ 提升LTV</div>
-        </div>
-      </div>
-
-      <div style="font-weight:400; margin-top:1.5rem;">为什么用"双账户余额"？</div>
-      <div class="dual-account">
-        <div class="item"><h4>积分</h4><p>给所有人的通用货币——门槛低，容易理解</p></div>
-        <div class="item"><h4>卢布</h4><p>只给销售员——制造专属感，让B端觉得自己"不一样"，不是普通用户</p></div>
-      </div>
-
-      <div class="img-row">
-        <div class="img-placeholder"><img src="https://imgur.com/jWln9J2.jpg" alt="Bot界面1" onerror="this.style.background='#eaeaea'"></div>
-        <div class="img-placeholder"><img src="https://imgur.com/tN0JTbS.jpg" alt="Bot界面2" onerror="this.style.background='#eaeaea'"></div>
-      </div>
-    </div>
-
-    <!-- 06 成果 -->
-    <div class="module">
-      <div class="module-title"><span class="num">06 /</span> 成果：数据背后的商业价值</div>
-
-      <div class="results-grid">
-        <div class="result-item">
-          <span class="number">1,694,000</span>
-          <span class="label">零售端销售额 (RUB)</span>
-          <span class="sub">验证了"低价≠低质"的认知</span>
-        </div>
-        <div class="result-item">
-          <span class="number">≈33万</span>
-          <span class="label">线上总曝光</span>
-          <span class="sub">Shorts贡献超60%</span>
-        </div>
-        <div class="result-item">
-          <span class="number">210</span>
-          <span class="label">新增零售点</span>
-          <span class="sub">从专业店铺到商超</span>
-        </div>
-        <div class="result-item">
-          <span class="number">15场</span>
-          <span class="label">路演触达 · 8城</span>
-          <span class="sub">30-100人/场</span>
-        </div>
-      </div>
-
-      <table class="results-table">
-        <thead><tr><th>指标</th><th>数据</th><th>商业含义</th></tr></thead>
-        <tbody>
-          <tr><td>零售端销售额</td><td>1,694,000 RUB</td><td>验证了"低价≠低质"的认知，用户愿意为品质买单</td></tr>
-          <tr><td>线上总曝光</td><td>≈33万次</td><td>Shorts贡献超60%，说明短视频是触达新手用户最高效的介质</td></tr>
-          <tr><td>新增零售点</td><td>210个</td><td>从专业店铺扩展到商超，品牌从"小众"走向"大众"</td></tr>
-          <tr><td>路演触达</td><td>15场·8城·30-100人/场</td><td>直接触达B端决策者，为后续区域扩张铺路</td></tr>
-          <tr><td>小票上传量</td><td>+41%</td><td>用户从"一次性购买"转向"可被触达的长期关系"</td></tr>
-        </tbody>
-      </table>
-
-      <div class="conclusion-quote">
-        “从数据维度来看，这是一次新品从0到1、从无人知晓到完成区域市场初步渗透的完整样本。”
-      </div>
-    </div>
-
-  </div><!-- end imc-case -->
-
-  <!-- ========== CONTACT ========== -->
-  <div class="contact-section">
-    <h2>CONTACT</h2>
-    <div class="contact-grid">
-      <div class="contact-item"><span class="label">GMAIL</span><a href="mailto:zhangbaiyang927@gmail.com">zhangbaiyang927@gmail.com</a></div>
-      <div class="contact-item"><span class="label">LINKEDIN</span><a href="https://www.linkedin.com/in/baiyang-zhang-77a993325" target="_blank">linkedin.com/in/baiyang-zhang-77a993325</a></div>
-      <div class="contact-item"><span class="label">WECHAT</span><span>Maddy15630809279</span></div>
-    </div>
-    <div class="footer-note">© Maddy Zhang · 作品集</div>
-  </div>
-
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack"></div>
 </div>
 
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="work-head reveal">
+      <div class="eyebrow">Featured Work</div>
+      <h2 class="section-title">From Zero to One</h2>
+    </div>
+
+    <div class="case-intro reveal">
+      <p class="case-title">A precision IMC campaign built for price-sensitive first-time users</p>
+      <div class="sticker-row">
+        <span class="sticker">Integrated Marketing</span>
+        <span class="sticker">New Product Launch</span>
+        <span class="sticker">Full-Funnel Execution</span>
+        <span class="sticker">B2B Channel Activation</span>
+      </div>
+      <div class="case-cover">
+        <img src="https://i.imgur.com/ykTRk7G.jpg" alt="Campaign visual"
+             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Campaign Cover</div>'">
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 -->
+  <div class="title-card reveal">
+    <div class="num">01</div>
+    <div class="q">Why did we do this?</div>
+  </div>
+  <div class="wrap">
+    <div class="row reveal">
+      <div class="row-media">
+        <img src="https://i.imgur.com/xvZPZmT.jpg" alt="Market context"
+             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Market Context</div>'">
+      </div>
+      <div>
+        <p class="pull-quote">"The market isn't short on good products — it's short on reasons for users to dare and try."</p>
+        <div class="body-copy">
+          <p>Russia's nicotine-alternative market is growing fast, but the mental landscape around it is crowded and confusing. Mainstream brands cluster around a "high-performance" position, fighting over existing users with complex specs and premium pricing — while overlooking the largest pool of untapped growth.</p>
+          <p><strong>Price-sensitive first-time users</strong> want to try new-format products, but two barriers stand in the way:</p>
+        </div>
+        <ul class="barrier-list">
+          <li><strong>Cognitive barrier</strong> — specs are confusing, categories are unclear, "what's right for me" is a mystery</li>
+          <li><strong>Price barrier</strong> — unwilling to pay a premium for something they're not sure they'll like</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row reverse reveal">
+      <div>
+        <div class="block-label">Conclusion</div>
+        <p class="body-copy" style="margin-bottom:0;">Our brand equity concentrates on <strong>technical innovation</strong> — but lacks approachability in mainstream perception. This product's mission was never to be "a cheap product." Its job is to become the brand's <strong>first touchpoint</strong> with new users.</p>
+      </div>
+      <div class="row-media">
+        <div class="block-label">Core Logic Chain</div>
+        <div class="flow-chain">
+          <div class="flow-box"><span><b>Low Price</b>Removes decision risk</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box"><span><b>Product</b>Builds trust</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box"><span><b>Bot System</b>Compounds long-term value</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="title-card reveal sec-alt">
+    <div class="num">02</div>
+    <div class="q">Strategic Logic</div>
+  </div>
+  <div class="sec-alt">
+    <div class="wrap" style="padding-top:110px;">
+      <div class="one-liner reveal">
+        <div class="lbl">One-Line Strategy</div>
+        <div class="stmt">"Trade one low-cost trial for one long-term user."</div>
+      </div>
+      <div class="funnel reveal">
+        <div class="funnel-tier">
+          <div class="tier-name">Surface</div>
+          <div class="tier-logic">Price-Driven</div>
+          <div class="tier-action">Launch pricing + gift-with-purchase, lowering the psychological barrier to a first try</div>
+        </div>
+        <div class="funnel-connector">↓</div>
+        <div class="funnel-tier">
+          <div class="tier-name">Middle</div>
+          <div class="tier-logic">Experience-Driven</div>
+          <div class="tier-action">In-store roadshows + tasting events, turning "seeing" into "trying"</div>
+        </div>
+        <div class="funnel-connector">↓</div>
+        <div class="funnel-tier">
+          <div class="tier-name">Deep</div>
+          <div class="tier-logic">Relationship-Driven</div>
+          <div class="tier-action">Bot loyalty system, turning "a single purchase" into "an ongoing connection"</div>
+        </div>
+      </div>
+      <div class="reveal" style="padding-bottom:110px;">
+        <div class="block-label" style="text-align:center;">Why This Order?</div>
+        <ul class="why-order">
+          <li><strong>Price is the hook</strong> — without a low entry price, the target user won't even notice the brand</li>
+          <li><strong>Experience is the converter</strong> — only after touching and trying does "low price ≠ low quality" become believable</li>
+          <li><strong>Relationship is the moat</strong> — competitors can copy a price, but they can't copy an already-established user habit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class="title-card reveal">
+    <div class="num">03</div>
+    <div class="q">Online Marketing Matrix</div>
+  </div>
+  <div class="wrap">
+    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 70px;">Not "posting content" — designing a journey.</p>
+
+    <div class="matrix-block reveal">
+      <div class="matrix-head">Telegram / Brand Bot</div>
+      <div class="matrix-grid">
+        <div class="what">
+          <div class="block-label">What We Did</div>
+          <p>Launch-exclusive coupon + prize-draw mechanic + receipt-upload flow</p>
+        </div>
+        <div class="why">
+          <div class="block-label">Why This Works</div>
+          <ul>
+            <li>The coupon answers: why buy <em>now</em></li>
+            <li>The prize draw answers: why <em>share</em></li>
+            <li>Receipt upload answers: how to turn an offline buyer into a reachable online user</li>
+          </ul>
+        </div>
+      </div>
+      <div class="key-detail">Key detail — the coupon carries a 7-day expiry, creating gentle urgency and preventing "I'll save it for later."</div>
+    </div>
+
+    <div class="matrix-block reveal">
+      <div class="matrix-head">Social Media (Telegram / YouTube)</div>
+      <div class="matrix-grid">
+        <div class="what">
+          <div class="block-label">What We Did</div>
+          <p>Unified hashtag #XLIMGOLITE + KOL unboxing + KOC user posts</p>
+        </div>
+        <div class="why">
+          <div class="block-label">Why This Works</div>
+          <ul>
+            <li><strong>KOL</strong> drives discovery — real-setting usage answers "what's this actually like"</li>
+            <li><strong>KOC</strong> drives credibility — everyday feedback is more persuasive than a KOL's, answering "is this just an ad"</li>
+            <li>One unified hashtag makes every post aggregable and trackable, and leaves room for organic content later</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="padding-bottom:20px;">
+      <div class="block-label">Campaign Assets</div>
+      <div class="gallery-strip" id="galleryStrip"></div>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="title-card reveal sec-alt">
+    <div class="num">04</div>
+    <div class="q">Offline: Precision B2B2C Penetration</div>
+  </div>
+  <div class="sec-alt">
+    <div class="wrap" style="padding-top:110px;">
+      <p class="pull-quote reveal" style="text-align:center;max-width:680px;margin:0 auto 70px;">"Not asking B2B to sell for the brand — helping B2B serve their own customers better."</p>
+
+      <div class="row reveal">
+        <div class="row-media">
+          <img src="https://i.imgur.com/Rci1RJT.jpg" alt="Maverick x OXVA tasting event"
+               onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Tasting Event</div>'">
+        </div>
+        <div>
+          <div class="block-label">What the Maverick &amp; OXVA Tasting Event Taught Us</div>
+          <p class="body-copy" style="margin-bottom:26px;">Maverick had retail footprint but lacked brand recognition; OXVA had a mature product line but limited regional penetration — a straightforward exchange of strengths.</p>
+          <div class="block-label">Why Novosibirsk?</div>
+          <ul class="reason-list">
+            <li>Not a first-tier city (Moscow / St. Petersburg), so competitive pressure is lower</li>
+            <li>Regional users are more open to new brands, giving early movers an advantage</li>
+            <li>Maverick already had a solid retail network in the city</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="block-label" style="margin-bottom:0;">Key Decisions</div>
+        <div class="decision">
+          <div class="d-title">B2B-only guest list</div>
+          <div class="d-why">Sales staff, store owners and distributors — not consumers directly. <strong>Why?</strong> B2B is leverage: winning over one store owner shapes how they influence the hundreds of everyday customers who walk through their door.</div>
+        </div>
+        <div class="decision">
+          <div class="d-title">Five-city tour, one stop per city</div>
+          <div class="d-why"><strong>Why?</strong> Scarcity — invitees feel valued, which is what turns attendance into word-of-mouth.</div>
+        </div>
+        <div class="decision">
+          <div class="d-title">On-site experience only, no direct selling</div>
+          <div class="d-why"><strong>Why?</strong> This is a tasting event, not a sales event — the goal is relationship-building, not volume.</div>
+        </div>
+      </div>
+
+      <div class="row reveal" style="margin-top:70px;margin-bottom:0;padding-bottom:110px;">
+        <div class="row-media" style="grid-column:1/-1;">
+          <img src="https://i.imgur.com/kS8f8M3.jpg" alt="Tasting event on the ground"
+               onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>On-Site Photo</div>'">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="title-card reveal">
+    <div class="num">05</div>
+    <div class="q">Closed-Loop Mechanism</div>
+  </div>
+  <div class="wrap">
+    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 60px;">"Every active behavior from a user should get an immediate response."</p>
+
+    <div class="loop-wrap reveal">
+      <svg class="loop-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#1e1e1e"/>
+          </marker>
+        </defs>
+        <path d="M215,62 Q300,95 338,200" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <path d="M338,215 Q300,315 215,343" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <path d="M185,343 Q95,315 62,215" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <path d="M62,185 Q95,80 185,62" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <circle cx="200" cy="55" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
+        <text x="200" y="61" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">1</text>
+        <circle cx="345" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
+        <text x="345" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">2</text>
+        <circle cx="200" cy="345" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
+        <text x="200" y="352" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">3</text>
+        <circle cx="55" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
+        <text x="55" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">4</text>
+      </svg>
+      <div class="loop-cards">
+        <div class="loop-card"><div class="lc-num">1</div><div class="lc-action">First Purchase</div><div class="lc-feedback">Low price + gift</div><div class="lc-value">Enters brand's owned audience pool</div></div>
+        <div class="loop-card"><div class="lc-num">2</div><div class="lc-action">Receipt Upload</div><div class="lc-feedback">Points reward</div><div class="lc-value">Builds a return-visit habit</div></div>
+        <div class="loop-card"><div class="lc-num">3</div><div class="lc-action">Social Share</div><div class="lc-feedback">Prize-draw entry</div><div class="lc-value">Brings in new users</div></div>
+        <div class="loop-card"><div class="lc-num">4</div><div class="lc-action">Repeat Purchase</div><div class="lc-feedback">Double points</div><div class="lc-value">Increases LTV</div></div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom:60px;">
+      <div class="block-label" style="text-align:center;">Why a "Dual-Balance" Account?</div>
+      <ul class="why-order">
+        <li><strong>Points</strong> are a universal currency for everyone — low barrier, easy to understand</li>
+        <li><strong>Rubles</strong> are reserved for sales staff only — creating exclusivity, so B2B partners feel distinct from ordinary users</li>
+      </ul>
+    </div>
+
+    <div class="row reveal" style="margin-bottom:0;padding-bottom:20px;">
+      <div class="row-media"><img src="https://i.imgur.com/jWln9J2.jpg" alt="Bot loyalty system"
+           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Bot System View 1</div>'"></div>
+      <div class="row-media"><img src="https://i.imgur.com/tN0JTbS.jpg" alt="Bot loyalty system"
+           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Bot System View 2</div>'"></div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="title-card reveal sec-alt">
+    <div class="num">06</div>
+    <div class="q">Results: The Business Value Behind the Numbers</div>
+  </div>
+  <div class="sec-alt">
+    <div class="wrap" style="padding-top:70px;">
+      <div class="stat-grid reveal">
+        <div class="stat-card"><div class="s-num">1,694,000 ₽</div><div class="s-lbl">Retail Sales</div><div class="s-mean">Validated that "low price ≠ low quality" — users pay for quality</div></div>
+        <div class="stat-card"><div class="s-num">≈330K</div><div class="s-lbl">Total Online Impressions</div><div class="s-mean">Shorts drove 60%+, proving short video is the most efficient format for reaching first-timers</div></div>
+        <div class="stat-card"><div class="s-num">210</div><div class="s-lbl">New Retail Points</div><div class="s-mean">Expanded from specialist stores into supermarkets — niche to mainstream</div></div>
+        <div class="stat-card"><div class="s-num">15 · 8 · 30–100</div><div class="s-lbl">Roadshow Reach</div><div class="s-mean">15 events, 8 cities, 30–100 attendees/event — direct access to B2B decision-makers</div></div>
+        <div class="stat-card"><div class="s-num">+41%</div><div class="s-lbl">Receipt Uploads</div><div class="s-mean">Users shifted from one-time buyers to a reachable, long-term relationship</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Get In Touch</div>
+    <h2 class="reveal">Let's build something<br>worth talking about.</h2>
+    <div class="contact-list reveal">
+      <a class="contact-item" href="mailto:zhangbaiyang927@gmail.com">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
+        zhangbaiyang927@gmail.com
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/baiyang-zhang-77a993325" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-item" href="weixin://" onclick="navigator.clipboard.writeText('Maddy15630809279');alert('WeChat ID copied: Maddy15630809279');return false;">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 2C4 2 0.5 5 0.5 8.7c0 2.1 1.15 3.95 2.95 5.2l-0.7 2.1 2.4-1.2c0.85 0.25 1.75 0.4 2.7 0.4h0.3a6 6 0 0 1-0.2-1.5c0-3.6 3.3-6.5 7.4-6.5 0.25 0 0.5 0.01 0.75 0.03C15.65 3.9 12.35 2 8.5 2zm-2.6 3.8c0.55 0 1 0.45 1 1s-0.45 1-1 1-1-0.45-1-1 0.45-1 1-1zm5.2 0c0.55 0 1 0.45 1 1s-0.45 1-1 1-1-0.45-1-1 0.45-1 1-1zM16 8.9c-3.6 0-6.5 2.5-6.5 5.6S12.4 20.1 16 20.1c0.8 0 1.55-0.13 2.25-0.35l2 1-0.55-1.75C21.15 17.7 22 16.35 22 14.5c0-3.1-2.9-5.6-6-5.6zm-2.1 3.2c0.45 0 0.8 0.35 0.8 0.8s-0.35 0.8-0.8 0.8-0.8-0.35-0.8-0.8 0.35-0.8 0.8-0.8zm4.2 0c0.45 0 0.8 0.35 0.8 0.8s-0.35 0.8-0.8 0.8-0.8-0.35-0.8-0.8 0.35-0.8 0.8-0.8z"/></svg>
+        WeChat — Maddy15630809279
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Maddy Zhang</span>
+  <span>Brand · Channel · Creative</span>
+</footer>
+
 <script>
-  // 无限滚动字幕
-  (function() {
-    const track = document.getElementById('marqueeTrack');
-    if (track) {
-      track.innerHTML = track.innerHTML + track.innerHTML;
-    }
-  })();
+  const skills = ["Team Collaboration","Cross-cultural Communication","Project Coordination","Problem Solving","Strategic Planning","Google Analytics","Telegram","HubSpot","Tableau","Claude","Vape Club Show","Staff Training","In-store Roadshows"];
+  const track = document.getElementById('marqueeTrack');
+  function buildMarquee(){
+    let html = '';
+    for(let rep=0; rep<2; rep++){ skills.forEach((s)=>{ html += `<span class="item">${s}</span><span class="item dot">·</span>`; }); }
+    track.innerHTML = html;
+  }
+  buildMarquee();
+
+  const galleryIds = ["MkowI0T","RysdfgT","nUe1mw0","q4LssnT","IejyBm8"];
+  const strip = document.getElementById('galleryStrip');
+  strip.innerHTML = galleryIds.map((id,i)=>`
+    <div class="g-img">
+      <img src="https://i.imgur.com/${id}.jpg" alt="Campaign asset ${i+1}"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="fallback" style="display:none;">Campaign Asset ${i+1}</div>
+    </div>`).join('');
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
+  }, {threshold:0.1});
+  revealEls.forEach(el=>io.observe(el));
 </script>
+
 </body>
 </html>
