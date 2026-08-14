@@ -1,29 +1,591 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maddy Zhang — Marketing Portfolio</title>
-<meta name="description" content="Maddy Zhang — Marketing, Creative, Data & Cross-cultural Communication">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maddy Zhang — Brand Marketing &amp; Creative Strategy</title>
+<meta name="description" content="Maddy Zhang — Trade &amp; Channel Marketing Specialist. Brand Architecture, Creative Content, Storytelling, Art Direction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bodoni+Moda:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--black:#1E1E1E;--gray:#AAAAAA;--light:#F5F5F5;--line:#E5E5E5;--white:#FFF}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--white);color:var(--black);font-family:Inter,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:24px 5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.05)}.nav-logo{font-size:14px;font-weight:600}.nav-links{display:flex;gap:30px;font-size:12px;color:#666}.container{width:min(1240px,90vw);margin:auto}.section{padding:150px 0}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#888;margin-bottom:22px}.section-title{font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-.055em;font-weight:500}.section-subtitle{margin-top:20px;color:#888;font-size:14px}.hero{min-height:100vh;padding:150px 0 100px;display:flex;flex-direction:column;justify-content:center;text-align:center}.hero-avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto 35px;background:#D9D9D9;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px}.hero-avatar img{width:100%;height:100%;object-fit:cover}.hero-name{font-size:clamp(64px,11vw,150px);line-height:.9;letter-spacing:-.075em;font-weight:500}.hero-role{max-width:580px;margin:35px auto 0;font-size:16px;color:#777;line-height:1.8}.hero-scroll{margin-top:70px;font-size:11px;color:#999;letter-spacing:.12em;text-transform:uppercase}.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:100px;align-items:start}.about-image{aspect-ratio:4/5;background:var(--light);display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;overflow:hidden}.about-image img{width:100%;height:100%;object-fit:cover}.about-copy{font-size:clamp(20px,2.1vw,30px);line-height:1.55;letter-spacing:-.025em}.about-copy p+p{margin-top:28px}.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}.marquee:hover .marquee-track{animation-play-state:paused}.marquee-content{display:flex;align-items:center;white-space:nowrap}.marquee-item{padding:25px;font-size:13px;color:#555}.marquee-dot{color:#aaa}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}.highlight-grid{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.highlight{padding:40px 35px 40px 0;border-right:1px solid var(--line)}.highlight:not(:first-child){padding-left:35px}.highlight:last-child{border-right:0}.highlight-number{font-size:12px;color:#999;margin-bottom:60px}.highlight h3{font-size:24px;line-height:1.2;letter-spacing:-.035em;margin-bottom:25px;font-weight:500}.highlight ul{list-style:none;color:#777;font-size:13px}.highlight li{position:relative;padding-left:16px;margin-bottom:14px}.highlight li:before{content:'—';position:absolute;left:0;color:#aaa}.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:70px}.event-image{aspect-ratio:4/3;background:var(--light);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px}.event-image img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.event-image:hover img{transform:scale(1.04)}.cases{margin-top:80px}.case{padding:90px 0;border-top:1px solid var(--line)}.case:last-child{border-bottom:1px solid var(--line)}.case-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:60px}.case-title{font-size:clamp(36px,5vw,68px);line-height:.98;letter-spacing:-.055em;font-weight:500}.case-meta{display:flex;flex-direction:column;justify-content:space-between;min-height:150px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid #dadada;padding:7px 11px;border-radius:100px;font-size:10px;color:#777}.case-date{color:#999;font-size:12px}.case-content{display:grid;grid-template-columns:1.2fr .8fr;gap:80px}.case-cover{aspect-ratio:16/10;background:var(--light);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px}.case-cover img{width:100%;height:100%;object-fit:cover}.case-description{color:#666;font-size:14px;line-height:1.8}.case-description h4{color:var(--black);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin:30px 0 12px}.case-description h4:first-child{margin-top:0}.results{margin-top:30px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.result{background:var(--light);padding:20px}.result strong{display:block;font-size:28px;font-weight:500;letter-spacing:-.04em}.result span{color:#999;font-size:10px}.case-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:25px}.case-gallery-item{aspect-ratio:16/10;background:var(--light);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:11px}.case-gallery-item img{width:100%;height:100%;object-fit:cover}.case-video{margin-top:30px;width:100%;background:#111}.case-video video{display:block;width:100%;max-height:700px}.contact{min-height:75vh;display:flex;align-items:center}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end}.contact-title{font-size:clamp(60px,10vw,140px);line-height:.85;letter-spacing:-.08em;font-weight:500}.contact-links{display:flex;flex-direction:column;border-top:1px solid var(--line)}.contact-link{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);font-size:14px;transition:padding .3s}.contact-link:hover{padding-left:10px;padding-right:10px}.contact-link span:last-child{color:#999}footer{padding:30px 0;border-top:1px solid var(--line);color:#999;font-size:11px;display:flex;justify-content:space-between}.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}@media(max-width:900px){.nav{padding:18px 5vw}.nav-links{gap:15px}.section{padding:100px 0}.about-grid,.case-header,.case-content,.contact-grid{grid-template-columns:1fr;gap:45px}.about-image{max-width:500px}.highlight-grid{grid-template-columns:1fr}.highlight,.highlight:not(:first-child){padding:40px 0;border-right:0;border-bottom:1px solid var(--line)}.highlight:last-child{border-bottom:0}.event-grid{grid-template-columns:1fr}.case-content{gap:40px}.contact{min-height:auto}}@media(max-width:600px){.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.hero{min-height:90vh;padding-top:120px}.hero-avatar{width:120px;height:120px}.hero-name{font-size:62px}.hero-role{font-size:14px;padding:0 15px}.section{padding:80px 0}.section-title{font-size:48px}.about-copy{font-size:19px}.case{padding:65px 0}.case-title{font-size:43px}.case-gallery{grid-template-columns:1fr}.results{grid-template-columns:1fr 1fr}.result strong{font-size:23px}.contact-title{font-size:70px}footer{flex-direction:column;gap:8px}}
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f5f5f4;
+    --ink:#141414;
+    --ink-soft:#6e6e6b;
+    --ink-faint:#a8a8a3;
+    --line:#e2e2dd;
+    --line-strong:#141414;
+    --max:1240px;
+    --pad:6vw;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    --serif:'Bodoni Moda', 'Times New Roman', serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+
+  ::selection{background:var(--ink);color:var(--bg);}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px var(--pad);
+    mix-blend-mode:difference;
+    color:#fff;
+  }
+  header.site-nav .mark{
+    font-size:13px;letter-spacing:.14em;font-weight:600;text-transform:uppercase;
+  }
+  header.site-nav nav{display:flex;gap:34px;}
+  header.site-nav nav a{
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;
+    position:relative;padding-bottom:2px;
+  }
+  header.site-nav nav a::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;
+    transition:width .3s ease;
+  }
+  header.site-nav nav a:hover::after{width:100%;}
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:stretch;
+    padding-top:90px;
+  }
+  .hero-left{
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:40px var(--pad) 60px;
+  }
+  .hero-eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .hero-name{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:clamp(3rem, 8.2vw, 7.2rem);
+    line-height:.95;
+    letter-spacing:-.02em;
+  }
+  .hero-role{
+    margin-top:22px;font-size:14px;color:var(--ink-soft);max-width:360px;line-height:1.6;
+  }
+  .hero-keywords{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(1.3rem,2.6vw,2rem);
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .hero-keywords span{display:block;}
+  .hero-keywords span::before{
+    content:'— ';color:var(--ink-faint);font-style:normal;
+  }
+  .hero-right{
+    position:relative;overflow:hidden;background:var(--bg-alt);
+  }
+  .hero-right img{
+    width:100%;height:100%;object-fit:cover;object-position:top center;
+    filter:grayscale(15%);
+  }
+  .hero-right .cap{
+    position:absolute;bottom:24px;right:24px;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+    background:rgba(255,255,255,.7);padding:6px 10px;
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee-section{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:22px 0;overflow:hidden;background:var(--bg);
+  }
+  .marquee-track{
+    display:flex;width:max-content;
+    animation:scroll-left 42s linear infinite;
+  }
+  .marquee-section:hover .marquee-track{animation-play-state:paused;}
+  .marquee-track span.item{
+    font-family:var(--sans);font-weight:500;font-size:clamp(1rem,2vw,1.35rem);
+    text-transform:uppercase;letter-spacing:.04em;
+    padding:0 28px;white-space:nowrap;color:var(--ink);
+  }
+  .marquee-track span.dot{color:var(--ink-faint);font-weight:400;}
+  @keyframes scroll-left{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* ---------- SECTION shared ---------- */
+  section{padding:120px 0;}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  h2.section-title{
+    font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;letter-spacing:-.01em;line-height:1.05;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--bg-alt);}
+  .about-grid{
+    display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;gap:48px;
+  }
+  .about-photo{
+    width:min(360px,60vw);border-radius:2px;overflow:hidden;
+  }
+  .about-photo img{width:100%;filter:grayscale(20%);}
+  .about-text{
+    max-width:760px;
+    display:grid;grid-template-columns:1fr 1fr;gap:0 56px;
+    text-align:left;font-size:16px;line-height:1.85;color:var(--ink-soft);
+  }
+  .about-text p{margin-bottom:22px;}
+  .about-name{
+    font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--ink);margin-bottom:20px;grid-column:1/-1;
+  }
+
+  /* ---------- HIGHLIGHTS ---------- */
+  .highlights-head{margin-bottom:56px;}
+  .highlights-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-top:1px solid var(--line);
+  }
+  .h-col{
+    padding:36px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .h-col:last-child{border-right:none;}
+  .h-col .h-index{
+    font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--ink-faint);margin-bottom:18px;display:block;
+  }
+  .h-col h3{
+    font-size:15px;letter-spacing:.02em;text-transform:uppercase;font-weight:600;margin-bottom:20px;
+  }
+  .h-col ul li{
+    font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;padding-left:16px;position:relative;
+  }
+  .h-col ul li::before{
+    content:'—';position:absolute;left:0;color:var(--ink-faint);
+  }
+
+  /* ---------- ACTIVITY GRID ---------- */
+  .activity-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:70px;background:var(--line);
+  }
+  .activity-grid .ph{
+    background:var(--bg-alt);aspect-ratio:4/5;position:relative;overflow:hidden;
+  }
+  .activity-grid .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);}
+  .activity-grid .ph .fallback{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+  }
+
+  /* ---------- WORK ---------- */
+  .work{background:var(--bg-alt);}
+  .case{
+    padding:70px 0;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;align-items:start;
+  }
+  .case:last-child{border-bottom:1px solid var(--line);}
+  .case-meta .tag{
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .case-meta h3{
+    font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:10px;
+  }
+  .case-meta .date{font-size:13px;color:var(--ink-faint);margin-bottom:28px;}
+  .case-meta .block-label{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+    margin-top:22px;margin-bottom:8px;
+  }
+  .case-meta p{font-size:14.5px;line-height:1.75;color:var(--ink-soft);}
+  .case-meta ul li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:6px;padding-left:14px;position:relative;}
+  .case-meta ul li::before{content:'·';position:absolute;left:0;color:var(--ink-faint);}
+  .case-meta .stats{
+    display:flex;flex-wrap:wrap;gap:26px;margin-top:8px;
+  }
+  .case-meta .stats div{min-width:70px;}
+  .case-meta .stats .num{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ink);}
+  .case-meta .stats .lbl{font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;}
+
+  .case-media{display:flex;flex-direction:column;gap:14px;}
+  .case-media .m-img,.case-media video{
+    width:100%;background:var(--line);
+    border-radius:2px;overflow:hidden;
+  }
+  .case-media .m-img img{width:100%;display:block;filter:grayscale(10%);}
+  .case-media .m-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .case-media video{width:100%;display:block;}
+  .fallback-box{
+    aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{text-align:center;padding-top:140px;padding-bottom:80px;}
+  .contact .eyebrow{margin-bottom:20px;}
+  .contact h2{
+    font-size:clamp(2.2rem,6vw,4.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:50px;
+  }
+  .contact-email{
+    display:inline-flex;align-items:center;gap:14px;
+    font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2rem);
+    border-bottom:1px solid var(--ink);padding-bottom:10px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;
+    color:var(--ink);margin-bottom:60px;
+  }
+  .contact-email .copied{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .contact-links{display:flex;justify-content:center;gap:40px;margin-bottom:110px;flex-wrap:wrap;}
+  .contact-links a, .contact-links span{
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+    border-bottom:1px solid transparent;padding-bottom:4px;transition:border-color .25s ease;
+  }
+  .contact-links a:hover{border-color:var(--ink);}
+  footer{
+    border-top:1px solid var(--line);padding:26px var(--pad);
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    header.site-nav nav{display:none;}
+    .hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-right{height:56vh;order:-1;}
+    .hero-left{padding:36px var(--pad) 44px;gap:30px;}
+    .about-text{grid-template-columns:1fr;}
+    .highlights-grid{grid-template-columns:1fr;}
+    .h-col{border-right:none;}
+    .activity-grid{grid-template-columns:1fr;}
+    .case{grid-template-columns:1fr;gap:30px;}
+    .case-media .m-row{grid-template-columns:1fr;}
+    section{padding:80px 0;}
+    .contact{padding-top:100px;}
+  }
+  @media (max-width:520px){
+    header.site-nav{padding:20px var(--pad);}
+    .hero-role{max-width:100%;}
+    .contact-links{gap:22px;}
+  }
 </style>
 </head>
 <body>
-<nav class="nav"><a href="#top" class="nav-logo">MADDY ZHANG</a><div class="nav-links"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>
-<main id="top">
-<section class="hero container"><div class="hero-avatar"><img src="https://imgur.com/undefined" alt="Maddy Portrait" onerror="this.remove();this.parentElement.innerHTML='<span>Maddy<br>Portrait</span>'"></div><h1 class="hero-name">Maddy Zhang</h1><p class="hero-role">Marketing · Creative · Data · Cross-cultural Communication</p><div class="hero-scroll">Scroll to explore ↓</div></section>
-<section class="section" id="about"><div class="container"><div class="eyebrow">01 / About</div><div class="about-grid reveal"><div class="about-image">Maddy Portrait</div><div class="about-copy"><p>你好，我是 Maddy Zhang。对市场营销充满热情的学习者与实践者。我相信，营销不仅仅是技术或策略，更是一种理解人、连接人的方式。</p><p>我始终保持开放心态，乐于拥抱新事物——无论是通过撰写文章、制作视频、参与项目，还是在线下会议、展览中与来自不同领域的人交流，我总能获得新的视角与灵感。</p><p>工作之外，我的兴趣是音乐、旅行和摄影。我热衷于捕捉生活中那些能激发创造力与美感的瞬间。</p><p>我始终相信，好的创意往往诞生于观察与对话——当不同文化交汇、不同观点碰撞，新的想法会自然生长。</p><p>我随时准备好迎接新的机遇，也期待与更多志同道合的人相遇。</p></div></div></div></section>
-<div class="marquee"><div class="marquee-track"><div class="marquee-content"><span class="marquee-item">团队合作</span><span class="marquee-dot">·</span><span class="marquee-item">问题解决</span><span class="marquee-dot">·</span><span class="marquee-item">跨文化沟通</span><span class="marquee-dot">·</span><span class="marquee-item">规划</span><span class="marquee-dot">·</span><span class="marquee-item">Google Analytics</span><span class="marquee-dot">·</span><span class="marquee-item">Telegram</span><span class="marquee-dot">·</span><span class="marquee-item">HubSpot</span><span class="marquee-dot">·</span><span class="marquee-item">Tableau</span><span class="marquee-dot">·</span><span class="marquee-item">Claude</span><span class="marquee-dot">·</span><span class="marquee-item">Vape Club Show</span><span class="marquee-dot">·</span><span class="marquee-item">店员培训</span><span class="marquee-dot">·</span><span class="marquee-item">码头路演</span><span class="marquee-dot">·</span></div><div class="marquee-content"><span class="marquee-item">团队合作</span><span class="marquee-dot">·</span><span class="marquee-item">问题解决</span><span class="marquee-dot">·</span><span class="marquee-item">跨文化沟通</span><span class="marquee-dot">·</span><span class="marquee-item">规划</span><span class="marquee-dot">·</span><span class="marquee-item">Google Analytics</span><span class="marquee-dot">·</span><span class="marquee-item">Telegram</span><span class="marquee-dot">·</span><span class="marquee-item">HubSpot</span><span class="marquee-dot">·</span><span class="marquee-item">Tableau</span><span class="marquee-dot">·</span><span class="marquee-item">Claude</span><span class="marquee-dot">·</span><span class="marquee-item">Vape Club Show</span><span class="marquee-dot">·</span><span class="marquee-item">店员培训</span><span class="marquee-dot">·</span><span class="marquee-item">码头路演</span><span class="marquee-dot">·</span></div></div></div>
-<section class="section"><div class="container"><div class="eyebrow">02 / Capabilities</div><h2 class="section-title">我所做的</h2><p class="section-subtitle">关键亮点</p><div class="highlight-grid reveal"><div class="highlight"><div class="highlight-number">01</div><h3>可扩展的<br>营销策略</h3><ul><li>为超过 30 家客户提供切实可行的零售营销策略</li><li>通过产品分析、市场调研和 A/B 测试，线上流量及活动参与量提升 64%</li><li>通过自动化营销工具触达 70+ B 端客户</li><li>通过跨界合作推动新品上市和二轮推广</li></ul></div><div class="highlight"><div class="highlight-number">02</div><h3>平面设计与<br>视频 / 动画制作</h3><ul><li>通过线上营销获得超过 3.26 万次曝光</li><li>帮助路演活动触达 1.2 万名 Telegram 用户</li><li>使用 Gemini 与 Canva</li><li>使用 iMovie、剪映、Midjourney 及 Seedance</li></ul></div><div class="highlight"><div class="highlight-number">03</div><h3>数据可视化与<br>故事讲述</h3><ul><li>使用 Excel 构建报表仪表板</li><li>持续提升 Tableau 数据可视化能力</li><li>使用 PowerPoint 展示、解读与讲述数据</li></ul></div></div></div></section>
-<section class="section"><div class="container"><div class="eyebrow">03 / Selected Moments</div><h2 class="section-title">活动现场</h2><div class="event-grid reveal"><div class="event-image"><img src="https://i.imgur.com/qxgFOgE.jpg" alt="活动图片1" onerror="this.remove();this.parentElement.innerHTML='<span>活动图片 1</span>'"></div><div class="event-image"><img src="https://i.imgur.com/abufw6j.jpg" alt="活动图片2" onerror="this.remove();this.parentElement.innerHTML='<span>活动图片 2</span>'"></div><div class="event-image"><img src="https://i.imgur.com/9l4W5BB.jpg" alt="活动图片3" onerror="this.remove();this.parentElement.innerHTML='<span>活动图片 3</span>'"></div></div></div></section>
-<section class="section" id="work"><div class="container"><div class="eyebrow">04 / Selected Work</div><h2 class="section-title">精选作品</h2><div class="cases">
-<article class="case reveal"><div class="case-header"><h3 class="case-title">OXVA &<br>BLUM 赠品</h3><div class="case-meta"><div class="tags"><span class="tag">Campaign Analytics</span><span class="tag">抽奖活动</span></div><div class="case-date">2026 / 01 / 28</div></div></div><div class="case-content"><div><div class="case-cover"><img src="https://i.imgur.com/MRG9XB2.jpg" alt="案例一封面图" onerror="this.remove();this.parentElement.innerHTML='<span>案例一封面图</span>'"></div><div class="case-gallery"><div class="case-gallery-item"><img src="https://imgur.com/undefined" alt="活动评论图" onerror="this.remove();this.parentElement.innerHTML='<span>活动评论图</span>'"></div><div class="case-gallery-item"><img src="https://i.imgur.com/jfeTNFm.jpg" alt="数据图1" onerror="this.remove();this.parentElement.innerHTML='<span>数据图 1</span>'"></div><div class="case-gallery-item"><img src="https://i.imgur.com/TxrZIOa.jpg" alt="数据图2" onerror="this.remove();this.parentElement.innerHTML='<span>数据图 2</span>'"></div></div></div><div class="case-description"><h4>Background</h4><p>OXVA 是可替代健康烟草品牌，BLUM 为本土烟油品牌。项目通过品牌联动与抽奖机制，增加社交互动与目标用户触达。</p><h4>Strategy</h4><p>抽奖规则设计、意见领袖合作、目标市场导向，以及社交媒体内容传播。</p><div class="results"><div class="result"><strong>292</strong><span>评论</span></div><div class="result"><strong>108</strong><span>点赞</span></div><div class="result"><strong>2.4K</strong><span>覆盖人数</span></div><div class="result"><strong>+2034</strong><span>粉丝增长</span></div></div></div></div></article>
-<article class="case reveal"><div class="case-header"><h3 class="case-title">MAVERICK &<br>OXVA 品鉴活动</h3><div class="case-meta"><div class="tags"><span class="tag">Campaign Analytics</span><span class="tag">五城巡回品鉴</span></div><div class="case-date">2025 / 新西伯利亚</div></div></div><div class="case-content"><div><div class="case-cover"><img src="https://i.imgur.com/ylrDDbL.jpg" alt="品鉴活动图片" onerror="this.remove();this.parentElement.innerHTML='<span>品鉴活动图片</span>'"></div><div class="case-video"><video controls preload="metadata"><source src="https://res.cloudinary.com/eaorfvmo/video/upload/v1786603849/testing-event.mov" type="video/quicktime">您的浏览器不支持 HTML5 视频播放。</video></div></div><div class="case-description"><h4>Background</h4><p>MAVERICK 拥有码头资源，但品牌认知有限；OXVA 拥有成熟产品，但需要进一步加强区域渗透。</p><h4>Strategy</h4><p>Telegram 话题标签、双方协商选品与赠品，同时对视觉物资进行二次传播，将线下活动与线上传播形成闭环。</p><div class="results"><div class="result"><strong>5</strong><span>城市巡演</span></div><div class="result"><strong>70–100</strong><span>单场参与人数</span></div><div class="result"><strong>12K</strong><span>连锁订单</span></div><div class="result"><strong>3000+</strong><span>线上曝光</span></div></div></div></div></article>
-<article class="case reveal"><div class="case-header"><h3 class="case-title">OXVA & OXBAR<br>BOT 体系重构</h3><div class="case-meta"><div class="tags"><span class="tag">用户留存</span><span class="tag">销售赋能</span></div><div class="case-date">CRM / BOT System</div></div></div><div class="case-content"><div><div class="case-cover"><img src="https://i.imgur.com/qTCNW5H.jpg" alt="BOT 体系重构" onerror="this.remove();this.parentElement.innerHTML='<span>BOT 体系图片</span>'"></div></div><div class="case-description"><h4>Background</h4><p>原激励体系单一，用户回访动力不足。因此重新设计用户激励与销售赋能体系，将积分、现金奖励和销售排名进行整合。</p><h4>System</h4><p>双账户余额（积分 + 卢布）、7 种积分获取路径、销售员排行榜、抽奖板块以及自助查询。</p><div class="results"><div class="result"><strong>+41%</strong><span>小票上传</span></div><div class="result"><strong>+21</strong><span>销售员新增</span></div><div class="result"><strong>110K ₽</strong><span>营业额</span></div><div class="result"><strong>+12%</strong><span>增长</span></div></div></div></div></article>
-<article class="case reveal"><div class="case-header"><h3 class="case-title">电子烟<br>俱乐部秀</h3><div class="case-meta"><div class="tags"><span class="tag">活动策略策划</span><span class="tag">全流程</span></div><div class="case-date">Event Strategy</div></div></div><div class="case-content"><div><div class="case-cover"><img src="https://i.imgur.com/zzvRERe.jpg" alt="电子烟俱乐部秀" onerror="this.remove();this.parentElement.innerHTML='<span>电子烟俱乐部秀图片</span>'"></div></div><div class="case-description"><h4>Role</h4><p>活动策划 + 多方协商 + 数据复盘。</p><h4>Responsibilities</h4><p>负责展商对接、现场协调、现场执行以及团队分工。</p><h4>Result</h4><p>待补充</p></div></div></article>
-</div></div></section>
-<section class="section contact" id="contact"><div class="container"><div class="eyebrow">05 / Contact</div><div class="contact-grid"><h2 class="contact-title">Let's<br>talk.</h2><div class="contact-links"><a class="contact-link" href="mailto:zhangbaiyang927@gmail.com"><span>GMAIL</span><span>↗</span></a><a class="contact-link" href="https://www.linkedin.com/in/baiyang-zhang-77a993325" target="_blank" rel="noopener"><span>LINKEDIN</span><span>↗</span></a><div class="contact-link"><span>WECHAT</span><span>Maddy15630809279</span></div></div></div></div></section>
-</main><footer class="container"><span>© 2026 Maddy Zhang</span><span>Marketing · Creative · Data</span></footer>
-<script>const els=document.querySelectorAll('.reveal');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>io.observe(e));</script>
-</body></html>
+
+<header class="site-nav">
+  <a href="#home" class="mark">Maddy Zhang</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div>
+      <div class="hero-eyebrow">Trade &amp; Channel Marketing</div>
+      <h1 class="hero-name">Maddy<br>Zhang</h1>
+      <p class="hero-role">Marketing strategist working across brand, channel and content — building clarity and momentum for consumer brands entering complex regional markets.</p>
+    </div>
+    <div class="hero-keywords">
+      <span>Brand Architecture</span>
+      <span>Creative Content</span>
+      <span>Storytelling</span>
+      <span>Art Direction</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://i.imgur.com/aiiMK0a.jpg" alt="Maddy Zhang portrait"
+         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-full').style.display='flex';">
+    <div class="fallback-full" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);">Portrait Image</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="https://i.imgur.com/jN50Pt0.jpg" alt="Maddy Zhang"
+           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Portrait Photo</div>'">
+    </div>
+    <div class="about-text reveal">
+      <div class="about-name">Hi, I'm Maddy Zhang.</div>
+      <p>A marketer driven by curiosity and grounded in practice. I believe marketing is never only about tactics or strategy — at its core, it's a way of understanding people and building real connection.</p>
+      <p>I stay open to new ideas, through writing, filmmaking, and project work, through conferences and exhibitions, meeting people from different fields and letting their perspectives sharpen my own.</p>
+      <p>Outside of work, I'm a devoted lover of music, travel and photography, always chasing the small moments that spark creativity and beauty. I believe the best ideas are born from observation and conversation.</p>
+      <p>When you stand at the intersection of cultures and let different viewpoints collide, curiosity and openness grow naturally. I'm always ready for the next opportunity — and always glad to meet people who share the same drive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="highlights-head reveal">
+      <div class="eyebrow">What I've done</div>
+      <h2 class="section-title">Key Highlights</h2>
+    </div>
+    <div class="highlights-grid reveal">
+      <div class="h-col">
+        <span class="h-index">01</span>
+        <h3>Scalable Marketing Strategy</h3>
+        <ul>
+          <li>Delivered actionable retail marketing strategies for 30+ clients</li>
+          <li>Lifted online traffic and campaign engagement by 64% through competitive analysis, market research and A/B testing</li>
+          <li>Reached 70+ B2B accounts through automated marketing tools</li>
+          <li>Drove new product launches and second-wave promotions through cross-industry collaborations</li>
+        </ul>
+      </div>
+      <div class="h-col">
+        <span class="h-index">02</span>
+        <h3>Graphic &amp; Motion Design</h3>
+        <ul>
+          <li>Generated 32.6K+ impressions through online marketing, extending roadshow reach to 12,000 Telegram users</li>
+          <li>Worked with Gemini and Canva for creative production</li>
+          <li>Worked with iMovie, Jianying, Midjourney and Seedance for video and animation</li>
+        </ul>
+      </div>
+      <div class="h-col">
+        <span class="h-index">03</span>
+        <h3>Data &amp; Storytelling</h3>
+        <ul>
+          <li>Built reporting dashboards in Excel; advanced working proficiency in Tableau</li>
+          <li>Presented segmented performance data through formula-driven PowerPoint decks</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="activity-grid reveal">
+      <div class="ph">
+        <img src="https://i.imgur.com/OfNNRmV.jpg" alt="Activity photo 1"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Activity Photo 1</div>
+      </div>
+      <div class="ph">
+        <img src="https://i.imgur.com/vGeznel.jpg" alt="Activity photo 2"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Activity Photo 2</div>
+      </div>
+      <div class="ph">
+        <div class="fallback" style="display:flex;">Activity Photo 3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="highlights-head reveal">
+      <div class="eyebrow">Selected Projects</div>
+      <h2 class="section-title">Featured Work</h2>
+    </div>
+
+    <!-- Case 1 -->
+    <div class="case reveal">
+      <div class="case-meta">
+        <div class="tag">Campaign Analytics · Giveaway Activation</div>
+        <h3>Oxva &amp; Blum Giveaway</h3>
+        <div class="date">January 28, 2026</div>
+        <div class="block-label">Background</div>
+        <p>OXVA is a reduced-risk nicotine alternative brand; BLUM is a local e-liquid brand. The two partnered on a co-branded social giveaway to grow shared audience reach.</p>
+        <div class="block-label">Key Strategy</div>
+        <ul>
+          <li>Giveaway entry mechanics designed for maximum participation</li>
+          <li>KOL partnerships to extend organic reach</li>
+          <li>Targeted market segmentation across regional audiences</li>
+        </ul>
+        <div class="block-label">Results</div>
+        <div class="stats">
+          <div><div class="num">292</div><div class="lbl">Comments</div></div>
+          <div><div class="num">108</div><div class="lbl">Likes</div></div>
+          <div><div class="num">2.4K</div><div class="lbl">Reach</div></div>
+          <div><div class="num">+2,034</div><div class="lbl">New Followers</div></div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="m-row">
+          <div class="m-img"><img src="https://i.imgur.com/jfeTNFm.jpg" alt="Giveaway performance data"
+               onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Performance Data 1</div>'"></div>
+          <div class="m-img"><img src="https://i.imgur.com/TxrZIOa.jpg" alt="Giveaway performance data"
+               onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Performance Data 2</div>'"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2 -->
+    <div class="case reveal">
+      <div class="case-meta">
+        <div class="tag">Campaign Analytics · Five-City Tour</div>
+        <h3>Maverick &amp; OXVA Tasting Event</h3>
+        <div class="date">2025 · Novosibirsk</div>
+        <div class="block-label">Background</div>
+        <p>Maverick brought strong retail footprint but limited brand recognition; OXVA brought a mature product line but limited regional penetration. The tasting tour paired both strengths.</p>
+        <div class="block-label">Strategy</div>
+        <ul>
+          <li>Dedicated Telegram hashtag activation across five cities</li>
+          <li>Jointly curated product selection and gifting between both brands</li>
+          <li>Secondary distribution of visual assets across partner channels</li>
+        </ul>
+        <div class="block-label">Results</div>
+        <div class="stats">
+          <div><div class="num">5</div><div class="lbl">Cities Toured</div></div>
+          <div><div class="num">70–100</div><div class="lbl">Guests / Stop</div></div>
+          <div><div class="num">12K</div><div class="lbl">Chain Orders</div></div>
+          <div><div class="num">3,000+</div><div class="lbl">Online Impressions</div></div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="m-img"><img src="https://i.imgur.com/ylrDDbL.jpg" alt="Tasting event"
+             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Event Photo</div>'"></div>
+        <video controls playsinline>
+          <source src="https://res.cloudinary.com/eaorfvmo/video/upload/v1786603849/testing-event.mov" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+      </div>
+    </div>
+
+    <!-- Case 3 -->
+    <div class="case reveal">
+      <div class="case-meta">
+        <div class="tag">User Retention · Sales Enablement</div>
+        <h3>OXVA &amp; OXBAR BOT Loyalty Redesign</h3>
+        <div class="date">Program Redesign</div>
+        <div class="block-label">Background</div>
+        <p>The original loyalty system relied on a single mechanic, giving customers little reason to return or engage repeatedly.</p>
+        <div class="block-label">Strategy</div>
+        <ul>
+          <li>Dual-balance accounts combining loyalty points and ruble credit</li>
+          <li>Seven distinct point-earning channels</li>
+          <li>Sales-rep leaderboard and prize-draw module</li>
+          <li>Self-service balance and order lookup</li>
+        </ul>
+        <div class="block-label">Results</div>
+        <div class="stats">
+          <div><div class="num">+41%</div><div class="lbl">Receipt Uploads</div></div>
+          <div><div class="num">21</div><div class="lbl">New Sales Reps</div></div>
+          <div><div class="num">₽1.1M</div><div class="lbl">Revenue (+12%)</div></div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="m-img"><img src="https://i.imgur.com/qTCNW5H.jpg" alt="BOT loyalty system"
+             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>System Interface</div>'"></div>
+      </div>
+    </div>
+
+    <!-- Case 4 -->
+    <div class="case reveal">
+      <div class="case-meta">
+        <div class="tag">Event Strategy · End-to-End Coordination</div>
+        <h3>Vape Club Show</h3>
+        <div class="date">Regional Trade Exhibition</div>
+        <div class="block-label">Role</div>
+        <p>Event strategy, on-site coordination, multi-party liaison and post-event analysis.</p>
+        <div class="block-label">Scope</div>
+        <ul>
+          <li>Exhibitor outreach and contract coordination</li>
+          <li>Venue logistics and booth planning</li>
+          <li>On-site execution and team assignment</li>
+        </ul>
+        <div class="block-label">Results</div>
+        <p style="color:var(--ink-faint);">To be added</p>
+      </div>
+      <div class="case-media">
+        <div class="m-img"><img src="https://i.imgur.com/zzvRERe.jpg" alt="Vape Club Show"
+             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Exhibition Photo</div>'"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Get In Touch</div>
+    <h2 class="reveal">Let's build something<br>worth talking about.</h2>
+    <button class="contact-email reveal" id="emailBtn">
+      zhangbaiyang927@gmail.com
+      <span class="copied" id="copiedLabel">Copy</span>
+    </button>
+    <div class="contact-links reveal">
+      <a href="https://www.linkedin.com/in/baiyang-zhang-77a993325" target="_blank" rel="noopener">LinkedIn</a>
+      <span>WeChat — Maddy15630809279</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Maddy Zhang</span>
+  <span>Brand · Channel · Creative</span>
+</footer>
+
+<script>
+  // Build marquee content dynamically, duplicated for seamless loop
+  const skills = ["Team Collaboration","Cross-cultural Communication","Project Coordination","Problem Solving","Strategic Planning","Google Analytics","Telegram","HubSpot","Tableau","Claude","Vape Club Show","Staff Training","In-store Roadshows"];
+  const track = document.getElementById('marqueeTrack');
+  function buildMarquee(){
+    let html = '';
+    for(let rep=0; rep<2; rep++){
+      skills.forEach((s,i)=>{
+        html += `<span class="item">${s}</span><span class="item dot">·</span>`;
+      });
+    }
+    track.innerHTML = html;
+  }
+  buildMarquee();
+
+  // Copy email
+  const emailBtn = document.getElementById('emailBtn');
+  const copiedLabel = document.getElementById('copiedLabel');
+  emailBtn.addEventListener('click', ()=>{
+    navigator.clipboard.writeText('zhangbaiyang927@gmail.com').then(()=>{
+      copiedLabel.textContent = 'Copied!';
+      setTimeout(()=>{ copiedLabel.textContent = 'Copy'; }, 1800);
+    });
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
