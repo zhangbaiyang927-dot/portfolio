@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,8 @@
     .nav-right{display:flex;gap:30px;justify-self:end;}
     .nav-right a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;display:inline-block;transition:transform .3s cubic-bezier(.16,1,.3,1);}
     .nav-right a:hover{transform:scale(1.28);}
+    .lang-toggle{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:4px 14px;border-radius:20px;cursor:pointer;transition:all .3s ease;mix-blend-mode:difference;}
+    .lang-toggle:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
     @media (max-width:900px){.nav-left .cta{display:none;}.nav-right{display:none;}.nav-symbol{display:none;}header.site-nav{grid-template-columns:1fr;}}
 
     /* HERO */
@@ -52,6 +54,7 @@
     .hero-right img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(15%);}
     .fallback-full{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);}
     .fallback-box{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;}.hero-right{height:56vh;order:-1;}.hero-left{padding:36px var(--pad) 44px;gap:30px;}}
 
     /* MARQUEE */
     .marquee-section{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;}
@@ -78,18 +81,9 @@
     /* WORK HEADER */
     .work-head{margin-bottom:56px;}
 
-    /* CASE INTRO - 修改为网格布局，实现文字与图片左右排列 */
-    .case-intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 0;
-    }
-    .case-intro-text {
-      display: flex;
-      flex-direction: column;
-    }
+    /* CASE INTRO */
+    .case-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 0; }
+    .case-intro-text { display: flex; flex-direction: column; }
     .case-title{font-family:var(--sans);font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;letter-spacing:-.01em;max-width:760px;margin-bottom:28px;}
     .sticker-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:50px;}
     .sticker{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;border:1.4px solid var(--ink);padding:8px 16px;border-radius:40px;white-space:nowrap;}
@@ -97,19 +91,7 @@
     .sticker:nth-child(even){transform:rotate(1.8deg);}
     .case-cover{width:100%;border-radius:2px;overflow:hidden;margin-bottom:10px;}
     .case-cover img{width:100%;filter:grayscale(12%);}
-
-    @media (max-width:900px){
-      .case-intro-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .case-intro-text {
-        order: 2;
-      }
-      .case-cover {
-        order: 1;
-      }
-    }
+    @media (max-width:900px){.case-intro-grid { grid-template-columns: 1fr; gap: 30px; } .case-intro-text { order: 2; } .case-cover { order: 1; } }
 
     /* TITLE CARD */
     .title-card{min-height:50svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px var(--pad);border-top:1px solid var(--line);}
@@ -127,13 +109,11 @@
     .barrier-list li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:12px;padding-left:20px;position:relative;}
     .barrier-list li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
     .block-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px;}
-
     .flow-chain{display:flex;align-items:stretch;gap:0;width:100%;}
     .flow-box{flex:1;border:1px solid var(--line);padding:26px 20px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);text-align:center;display:flex;align-items:center;justify-content:center;}
     .flow-box b{display:block;color:var(--ink);font-weight:600;font-size:14px;margin-bottom:6px;}
     .flow-arrow{flex:0 0 46px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:20px;}
-    @media (max-width:700px){.flow-chain{flex-direction:column;}.flow-arrow{transform:rotate(90deg);padding:8px 0;}
-      .row{grid-template-columns:1fr;gap:34px;}.row.reverse{grid-template-columns:1fr;}.row.reverse .row-media{order:-1;}}
+    @media (max-width:700px){.flow-chain{flex-direction:column;}.flow-arrow{transform:rotate(90deg);padding:8px 0;}.row{grid-template-columns:1fr;gap:34px;}.row.reverse{grid-template-columns:1fr;}.row.reverse .row-media{order:-1;}}
 
     .one-liner{text-align:center;padding:0 0 70px;}
     .one-liner .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:20px;}
@@ -141,9 +121,7 @@
 
     .funnel{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:80px;}
     .funnel-tier{border:1px solid var(--line);padding:26px 34px;text-align:center;}
-    .funnel-tier:nth-child(1){width:100%;}
-    .funnel-tier:nth-child(3){width:82%;}
-    .funnel-tier:nth-child(5){width:64%;}
+    .funnel-tier:nth-child(1){width:100%;}.funnel-tier:nth-child(3){width:82%;}.funnel-tier:nth-child(5){width:64%;}
     .funnel-tier .tier-name{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);margin-bottom:6px;}
     .funnel-tier .tier-logic{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
     .funnel-tier .tier-action{font-size:14px;color:var(--ink-soft);line-height:1.55;max-width:480px;margin:0 auto;}
@@ -163,19 +141,10 @@
     .key-detail{margin-top:18px;font-size:13.5px;color:var(--ink);background:var(--bg-alt);padding:14px 18px;border-left:2px solid var(--ink);}
     .sec-alt .key-detail{background:var(--bg);}
     @media (max-width:800px){.matrix-grid{grid-template-columns:1fr;gap:22px;}}
-
     .gallery-strip{display:flex;gap:2px;overflow-x:auto;margin-top:20px;background:var(--line);}
     .gallery-strip .g-img{flex:0 0 220px;aspect-ratio:4/5;background:var(--bg-alt);position:relative;overflow:hidden;}
     .gallery-strip .g-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);}
     .gallery-strip .g-img .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:center;padding:10px;}
-
-    .reason-list{margin-top:16px;}
-    .reason-list li{font-size:14.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:12px;padding-left:20px;position:relative;}
-    .reason-list li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
-    .decision{border-top:1px solid var(--line);padding:26px 0;}
-    .decision:last-child{border-bottom:1px solid var(--line);}
-    .decision .d-title{font-weight:600;font-size:15px;margin-bottom:8px;}
-    .decision .d-why{font-size:14px;color:var(--ink-soft);line-height:1.7;}
 
     .loop-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;margin-bottom:70px;}
     .loop-svg{width:100%;max-width:340px;margin:0 auto;display:block;}
@@ -196,15 +165,11 @@
     @media (max-width:900px){.stat-grid{grid-template-columns:1fr 1fr;}.stat-card:nth-child(2n){border-right:none;}}
     @media (max-width:520px){.stat-grid{grid-template-columns:1fr;}.stat-card{border-right:none !important;}}
 
-    /* HIGHLIGHTS */
-    .highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
-    .h-col{padding:36px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
-    .h-col:last-child{border-right:none;}
-    .h-col .h-index{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--ink-faint);margin-bottom:18px;display:block;}
-    .h-col h3{font-size:15px;letter-spacing:.02em;text-transform:uppercase;font-weight:600;margin-bottom:20px;}
-    .h-col ul li{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;padding-left:16px;position:relative;}
-    .h-col ul li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
-    @media (max-width:900px){.highlights-grid{grid-template-columns:1fr;}.h-col{border-right:none;}}
+    /* WORK 2 OSO 悬停样式 */
+    .oso-node{transition:all 0.3s cubic-bezier(.16,1,.3,1);}
+    .oso-node .oso-popup{transition:all 0.35s cubic-bezier(.16,1,.3,1);}
+    .oso-node:hover .oso-popup{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);}
+    .oso-node:hover{background:var(--bg-alt);border-color:var(--ink);}
 
     /* CONTACT */
     .contact{text-align:center;padding-top:130px;padding-bottom:80px;}
@@ -215,14 +180,7 @@
     .contact-item:hover{opacity:.55;}
     .contact-item .ic{width:16px;height:16px;flex-shrink:0;}
     footer{border-top:1px solid var(--line);padding:26px var(--pad);display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);}
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;min-height:auto;}
-      .hero-right{height:56vh;order:-1;}
-      .hero-left{padding:36px var(--pad) 44px;gap:30px;}
-      section{padding:74px 0;}
-      .title-card{min-height:38svh;padding:56px var(--pad);}
-    }
+    @media (max-width:900px){section{padding:74px 0;}.title-card{min-height:38svh;padding:56px var(--pad);}}
     @media (max-width:520px){header.site-nav{padding:20px var(--pad);}}
   </style>
 </head>
@@ -231,13 +189,14 @@
 <header class="site-nav">
   <div class="nav-left">
     <a href="#home" class="mark">Maddy Zhang</a>
-    <a href="#contact" class="cta">Get in touch</a>
+    <a href="#contact" class="cta" data-key="nav.cta">Get in touch</a>
   </div>
   <div class="nav-symbol">◆</div>
   <nav class="nav-right">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-key="nav.about">About</a>
+    <a href="#work" data-key="nav.work">Work</a>
+    <a href="#contact" data-key="nav.contact">Contact</a>
+    <button class="lang-toggle" id="langToggle">中文</button>
   </nav>
 </header>
 
@@ -245,20 +204,19 @@
 <section class="hero" id="home">
   <div class="hero-left">
     <div>
-      <div class="hero-eyebrow">Marketing Specialist</div>
+      <div class="hero-eyebrow" data-key="hero.eyebrow">Marketing Specialist</div>
       <h1 class="hero-name">Maddy<br>Zhang</h1>
-      <p class="hero-role">Marketing strategist working across brand, channel and content — building clarity and momentum for consumer brands entering complex regional markets.</p>
+      <p class="hero-role" data-key="hero.role">Marketing strategist working across brand, channel and content — building clarity and momentum for consumer brands entering complex regional markets.</p>
     </div>
     <div class="hero-keywords">
-      <span>Brand Architecture</span>
-      <span>Creative Content</span>
-      <span>Storytelling</span>
-      <span>Art Direction</span>
+      <span data-key="hero.kw1">Brand Architecture</span>
+      <span data-key="hero.kw2">Creative Content</span>
+      <span data-key="hero.kw3">Storytelling</span>
+      <span data-key="hero.kw4">Art Direction</span>
     </div>
   </div>
   <div class="hero-right">
-    <img src="https://i.imgur.com/aiiMK0a.jpg" alt="Maddy Zhang portrait"
-         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <img src="https://i.imgur.com/aiiMK0a.jpg" alt="Maddy Zhang portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
     <div class="fallback-full">Portrait Image</div>
   </div>
 </section>
@@ -267,15 +225,14 @@
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
-      <img src="https://i.imgur.com/jN50Pt0.jpg" alt="Maddy Zhang"
-           onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Portrait Photo</div>'">
+      <img src="https://i.imgur.com/jN50Pt0.jpg" alt="Maddy Zhang" onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Portrait Photo</div>'">
     </div>
     <div class="about-text reveal">
-      <div class="about-name">Hi, I'm Maddy Zhang.</div>
-      <p>A marketer driven by curiosity and grounded in practice. I believe marketing is never only about tactics or strategy — at its core, it's a way of understanding people and building real connection.</p>
-      <p>I stay open to new ideas, through writing, filmmaking, and project work, through conferences and exhibitions, meeting people from different fields and letting their perspectives sharpen my own.</p>
-      <p>Outside of work, I'm a devoted lover of music, travel and photography, always chasing the small moments that spark creativity and beauty. I believe the best ideas are born from observation and conversation.</p>
-      <p>When you stand at the intersection of cultures and let different viewpoints collide, curiosity and openness grow naturally. I'm always ready for the next opportunity — and always glad to meet people who share the same drive.</p>
+      <div class="about-name" data-key="about.name">Hi, I'm Maddy Zhang.</div>
+      <p data-key="about.p1">A marketer driven by curiosity and grounded in practice. I believe marketing is never only about tactics or strategy — at its core, it's a way of understanding people and building real connection.</p>
+      <p data-key="about.p2">I stay open to new ideas, through writing, filmmaking, and project work, through conferences and exhibitions, meeting people from different fields and letting their perspectives sharpen my own.</p>
+      <p data-key="about.p3">Outside of work, I'm a devoted lover of music, travel and photography, always chasing the small moments that spark creativity and beauty. I believe the best ideas are born from observation and conversation.</p>
+      <p data-key="about.p4">When you stand at the intersection of cultures and let different viewpoints collide, curiosity and openness grow naturally. I'm always ready for the next opportunity — and always glad to meet people who share the same drive.</p>
     </div>
   </div>
 </section>
@@ -289,267 +246,275 @@
 <section id="work">
   <div class="wrap">
     <div class="work-head reveal">
-      <div class="eyebrow">Featured Work</div>
-      <h2 class="section-title">From Zero to One</h2>
+      <div class="eyebrow" data-key="work.eyebrow">Featured Work</div>
+      <h2 class="section-title" data-key="work.title">From Zero to One</h2>
     </div>
 
-    <!-- 案例介绍区域：文字与图片左右排列 -->
+    <!-- WORK 1: IMC -->
     <div class="case-intro-grid reveal">
       <div class="case-intro-text">
-        <p class="case-title">从0到1：一场针对"价格敏感型新手"的IMC精准战役</p>
+        <p class="case-title" data-key="work1.title">WORK 1：从0到1 — 一场针对"价格敏感型新手"的IMC精准战役</p>
         <div class="sticker-row">
-          <span class="sticker">整合营销</span>
-          <span class="sticker">新品上市</span>
-          <span class="sticker">全链路闭环</span>
-          <span class="sticker">B端渠道激活</span>
+          <span class="sticker" data-key="work1.tag1">整合营销</span>
+          <span class="sticker" data-key="work1.tag2">新品上市</span>
+          <span class="sticker" data-key="work1.tag3">全链路闭环</span>
+          <span class="sticker" data-key="work1.tag4">B端渠道激活</span>
         </div>
       </div>
       <div class="case-cover">
-        <img src="https://i.imgur.com/ykTRk7G.jpg" alt="Campaign visual"
-             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Campaign Cover</div>'">
+        <img src="https://i.imgur.com/ykTRk7G.jpg" alt="Campaign visual" onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Campaign Cover</div>'">
       </div>
     </div>
   </div>
 
-  <!-- 01 -->
-  <div class="title-card reveal">
-    <div class="num">01</div>
-    <div class="q">Why did we do this?</div>
-  </div>
+  <!-- WORK 1 详情（精简保留核心结构） -->
+  <div class="title-card reveal"><div class="num">01</div><div class="q" data-key="work1.q1">Why did we do this?</div></div>
   <div class="wrap">
     <div class="row reveal">
-      <div class="row-media">
-        <img src="https://i.imgur.com/xvZPZmT.jpg" alt="Market context"
-             onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Market Context</div>'">
-      </div>
+      <div class="row-media"><img src="https://i.imgur.com/xvZPZmT.jpg" alt="Market context" onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Market Context</div>'"></div>
       <div>
-        <p class="pull-quote">"The market isn't short on good products — it's short on reasons for users to dare and try."</p>
+        <p class="pull-quote" data-key="work1.quote">"The market isn't short on good products — it's short on reasons for users to dare and try."</p>
         <div class="body-copy">
-          <p>Russia's nicotine-alternative market is growing fast, but the mental landscape around it is crowded and confusing. Mainstream brands cluster around a "high-performance" position, fighting over existing users with complex specs and premium pricing — while overlooking the largest pool of untapped growth.</p>
-          <p><strong>Price-sensitive first-time users</strong> want to try new-format products, but two barriers stand in the way:</p>
+          <p data-key="work1.p1">Russia's nicotine-alternative market is growing fast, but the mental landscape around it is crowded and confusing. Mainstream brands cluster around a "high-performance" position, fighting over existing users with complex specs and premium pricing — while overlooking the largest pool of untapped growth.</p>
+          <p data-key="work1.p2"><strong>Price-sensitive first-time users</strong> want to try new-format products, but two barriers stand in the way:</p>
         </div>
         <ul class="barrier-list">
-          <li><strong>Cognitive barrier</strong> — specs are confusing, categories are unclear, "what's right for me" is a mystery</li>
-          <li><strong>Price barrier</strong> — unwilling to pay a premium for something they're not sure they'll like</li>
+          <li data-key="work1.b1"><strong>Cognitive barrier</strong> — specs are confusing, categories are unclear, "what's right for me" is a mystery</li>
+          <li data-key="work1.b2"><strong>Price barrier</strong> — unwilling to pay a premium for something they're not sure they'll like</li>
         </ul>
       </div>
     </div>
-
     <div class="row reverse reveal">
       <div>
-        <div class="block-label">Conclusion</div>
-        <p class="body-copy" style="margin-bottom:0;">Our brand equity concentrates on <strong>technical innovation</strong> — but lacks approachability in mainstream perception. This product's mission was never to be "a cheap product." Its job is to become the brand's <strong>first touchpoint</strong> with new users.</p>
+        <div class="block-label" data-key="work1.conclusion">Conclusion</div>
+        <p class="body-copy" style="margin-bottom:0;" data-key="work1.conclusion_text">Our brand equity concentrates on <strong>technical innovation</strong> — but lacks approachability in mainstream perception. This product's mission was never to be "a cheap product." Its job is to become the brand's <strong>first touchpoint</strong> with new users.</p>
       </div>
       <div class="row-media">
-        <div class="block-label">Core Logic Chain</div>
+        <div class="block-label" data-key="work1.chain">Core Logic Chain</div>
         <div class="flow-chain">
-          <div class="flow-box"><span><b>Low Price</b>Removes decision risk</span></div>
+          <div class="flow-box"><span><b data-key="work1.chain1">Low Price</b><span data-key="work1.chain1d">Removes decision risk</span></span></div>
           <div class="flow-arrow">→</div>
-          <div class="flow-box"><span><b>Product</b>Builds trust</span></div>
+          <div class="flow-box"><span><b data-key="work1.chain2">Product</b><span data-key="work1.chain2d">Builds trust</span></span></div>
           <div class="flow-arrow">→</div>
-          <div class="flow-box"><span><b>Bot System</b>Compounds long-term value</span></div>
+          <div class="flow-box"><span><b data-key="work1.chain3">Bot System</b><span data-key="work1.chain3d">Compounds long-term value</span></span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 02 -->
-  <div class="title-card reveal sec-alt">
-    <div class="num">02</div>
-    <div class="q">Strategic Logic</div>
-  </div>
+  <div class="title-card reveal sec-alt"><div class="num">02</div><div class="q" data-key="work1.q2">Strategic Logic</div></div>
   <div class="sec-alt">
     <div class="wrap" style="padding-top:110px;">
       <div class="one-liner reveal">
-        <div class="lbl">One-Line Strategy</div>
-        <div class="stmt">"Trade one low-cost trial for one long-term user."</div>
+        <div class="lbl" data-key="work1.oneline_label">One-Line Strategy</div>
+        <div class="stmt" data-key="work1.oneline">"Trade one low-cost trial for one long-term user."</div>
       </div>
       <div class="funnel reveal">
-        <div class="funnel-tier">
-          <div class="tier-name">Surface</div>
-          <div class="tier-logic">Price-Driven</div>
-          <div class="tier-action">Launch pricing + gift-with-purchase, lowering the psychological barrier to a first try</div>
-        </div>
+        <div class="funnel-tier"><div class="tier-name" data-key="work1.f1_name">Surface</div><div class="tier-logic" data-key="work1.f1_logic">Price-Driven</div><div class="tier-action" data-key="work1.f1_action">Launch pricing + gift-with-purchase, lowering the psychological barrier to a first try</div></div>
         <div class="funnel-connector">↓</div>
-        <div class="funnel-tier">
-          <div class="tier-name">Middle</div>
-          <div class="tier-logic">Experience-Driven</div>
-          <div class="tier-action">In-store roadshows + tasting events, turning "seeing" into "trying"</div>
-        </div>
+        <div class="funnel-tier"><div class="tier-name" data-key="work1.f2_name">Middle</div><div class="tier-logic" data-key="work1.f2_logic">Experience-Driven</div><div class="tier-action" data-key="work1.f2_action">In-store roadshows + tasting events, turning "seeing" into "trying"</div></div>
         <div class="funnel-connector">↓</div>
-        <div class="funnel-tier">
-          <div class="tier-name">Deep</div>
-          <div class="tier-logic">Relationship-Driven</div>
-          <div class="tier-action">Bot loyalty system, turning "a single purchase" into "an ongoing connection"</div>
-        </div>
+        <div class="funnel-tier"><div class="tier-name" data-key="work1.f3_name">Deep</div><div class="tier-logic" data-key="work1.f3_logic">Relationship-Driven</div><div class="tier-action" data-key="work1.f3_action">Bot loyalty system, turning "a single purchase" into "an ongoing connection"</div></div>
       </div>
       <div class="reveal" style="padding-bottom:110px;">
-        <div class="block-label" style="text-align:center;">Why This Order?</div>
+        <div class="block-label" style="text-align:center;" data-key="work1.why_label">Why This Order?</div>
         <ul class="why-order">
-          <li><strong>Price is the hook</strong> — without a low entry price, the target user won't even notice the brand</li>
-          <li><strong>Experience is the converter</strong> — only after touching and trying does "low price ≠ low quality" become believable</li>
-          <li><strong>Relationship is the moat</strong> — competitors can copy a price, but they can't copy an already-established user habit</li>
+          <li data-key="work1.why1"><strong>Price is the hook</strong> — without a low entry price, the target user won't even notice the brand</li>
+          <li data-key="work1.why2"><strong>Experience is the converter</strong> — only after touching and trying does "low price ≠ low quality" become believable</li>
+          <li data-key="work1.why3"><strong>Relationship is the moat</strong> — competitors can copy a price, but they can't copy an already-established user habit</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- 03 -->
-  <div class="title-card reveal">
-    <div class="num">03</div>
-    <div class="q">Online Marketing Matrix</div>
-  </div>
+  <!-- WORK 1 剩余章节（03-06）精简展示 -->
+  <div class="title-card reveal"><div class="num">03</div><div class="q" data-key="work1.q3">Online Marketing Matrix</div></div>
   <div class="wrap">
-    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 70px;">Not "posting content" — designing a journey.</p>
-
+    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 70px;" data-key="work1.matrix_quote">Not "posting content" — designing a journey.</p>
     <div class="matrix-block reveal">
-      <div class="matrix-head">Telegram / Brand Bot</div>
+      <div class="matrix-head" data-key="work1.m1_head">Telegram / Brand Bot</div>
       <div class="matrix-grid">
-        <div class="what">
-          <div class="block-label">What We Did</div>
-          <p>Launch-exclusive coupon + prize-draw mechanic + receipt-upload flow</p>
-        </div>
-        <div class="why">
-          <div class="block-label">Why This Works</div>
-          <ul>
-            <li>The coupon answers: why buy <em>now</em></li>
-            <li>The prize draw answers: why <em>share</em></li>
-            <li>Receipt upload answers: how to turn an offline buyer into a reachable online user</li>
-          </ul>
-        </div>
+        <div class="what"><div class="block-label" data-key="work1.m1_what_label">What We Did</div><p data-key="work1.m1_what">Launch-exclusive coupon + prize-draw mechanic + receipt-upload flow</p></div>
+        <div class="why"><div class="block-label" data-key="work1.m1_why_label">Why This Works</div><ul><li data-key="work1.m1_why1">The coupon answers: why buy <em>now</em></li><li data-key="work1.m1_why2">The prize draw answers: why <em>share</em></li><li data-key="work1.m1_why3">Receipt upload answers: how to turn an offline buyer into a reachable online user</li></ul></div>
       </div>
-      <div class="key-detail">Key detail — the coupon carries a 7-day expiry, creating gentle urgency and preventing "I'll save it for later."</div>
+      <div class="key-detail" data-key="work1.m1_detail">Key detail — the coupon carries a 7-day expiry, creating gentle urgency and preventing "I'll save it for later."</div>
     </div>
-
-    <div class="matrix-block reveal">
-      <div class="matrix-head">Social Media (Telegram / YouTube)</div>
-      <div class="matrix-grid">
-        <div class="what">
-          <div class="block-label">What We Did</div>
-          <p>Unified hashtag #XLIMGOLITE + KOL unboxing + KOC user posts</p>
-        </div>
-        <div class="why">
-          <div class="block-label">Why This Works</div>
-          <ul>
-            <li><strong>KOL</strong> drives discovery — real-setting usage answers "what's this actually like"</li>
-            <li><strong>KOC</strong> drives credibility — everyday feedback is more persuasive than a KOL's, answering "is this just an ad"</li>
-            <li>One unified hashtag makes every post aggregable and trackable, and leaves room for organic content later</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <div class="reveal" style="padding-bottom:20px;">
-      <div class="block-label">Campaign Assets</div>
+      <div class="block-label" data-key="work1.assets_label">Campaign Assets</div>
       <div class="gallery-strip" id="galleryStrip"></div>
     </div>
   </div>
 
-  <!-- 04 -->
-  <div class="title-card reveal sec-alt">
-    <div class="num">04</div>
-    <div class="q">Offline: Precision B2B2C Penetration</div>
-  </div>
+  <div class="title-card reveal sec-alt"><div class="num">04</div><div class="q" data-key="work1.q4">Offline: Precision B2B2C Penetration</div></div>
   <div class="sec-alt">
     <div class="wrap" style="padding-top:110px;">
-      <p class="pull-quote reveal" style="text-align:center;max-width:680px;margin:0 auto 70px;">"Not asking B2B to sell for the brand — helping B2B serve their own customers better."</p>
-
+      <p class="pull-quote reveal" style="text-align:center;max-width:680px;margin:0 auto 70px;" data-key="work1.offline_quote">"Not asking B2B to sell for the brand — helping B2B serve their own customers better."</p>
       <div class="row reveal">
-        <div class="row-media">
-          <img src="https://i.imgur.com/Rci1RJT.jpg" alt="Maverick x OXVA tasting event"
-               onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Tasting Event</div>'">
-        </div>
+        <div class="row-media"><img src="https://i.imgur.com/Rci1RJT.jpg" alt="Maverick x OXVA tasting event" onerror="this.parentElement.innerHTML='<div class=\'fallback-box\'>Tasting Event</div>'"></div>
         <div>
-          <div class="block-label">What the Maverick &amp; OXVA Tasting Event Taught Us</div>
-          <p class="body-copy" style="margin-bottom:26px;">Maverick had retail footprint but lacked brand recognition; OXVA had a mature product line but limited regional penetration — a straightforward exchange of strengths.</p>
-          <div class="block-label">Why Novosibirsk?</div>
+          <div class="block-label" data-key="work1.offline_label">What the Maverick &amp; OXVA Tasting Event Taught Us</div>
+          <p class="body-copy" style="margin-bottom:26px;" data-key="work1.offline_p">Maverick had retail footprint but lacked brand recognition; OXVA had a mature product line but limited regional penetration — a straightforward exchange of strengths.</p>
+          <div class="block-label" data-key="work1.offline_city_label">Why Novosibirsk?</div>
           <ul class="reason-list">
-            <li>Not a first-tier city (Moscow / St. Petersburg), so competitive pressure is lower</li>
-            <li>Regional users are more open to new brands, giving early movers an advantage</li>
-            <li>Maverick already had a solid retail network in the city</li>
+            <li data-key="work1.offline_city1">Not a first-tier city (Moscow / St. Petersburg), so competitive pressure is lower</li>
+            <li data-key="work1.offline_city2">Regional users are more open to new brands, giving early movers an advantage</li>
+            <li data-key="work1.offline_city3">Maverick already had a solid retail network in the city</li>
           </ul>
         </div>
       </div>
-
-      <div class="reveal">
-        <div class="block-label" style="margin-bottom:0;">Key Decisions</div>
-        <div class="decision">
-          <div class="d-title">B2B-only guest list</div>
-          <div class="d-why">Sales staff, store owners and distributors — not consumers directly. <strong>Why?</strong> B2B is leverage: winning over one store owner shapes how they influence the hundreds of everyday customers who walk through their door.</div>
-        </div>
-        <div class="decision">
-          <div class="d-title">Five-city tour, one stop per city</div>
-          <div class="d-why"><strong>Why?</strong> Scarcity — invitees feel valued, which is what turns attendance into word-of-mouth.</div>
-        </div>
-        <div class="decision">
-          <div class="d-title">On-site experience only, no direct selling</div>
-          <div class="d-why"><strong>Why?</strong> This is a tasting event, not a sales event — the goal is relationship-building, not volume.</div>
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- 05 -->
-  <div class="title-card reveal">
-    <div class="num">05</div>
-    <div class="q">Closed-Loop Mechanism</div>
-  </div>
+  <div class="title-card reveal"><div class="num">05</div><div class="q" data-key="work1.q5">Closed-Loop Mechanism</div></div>
   <div class="wrap">
-    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 60px;">"Every active behavior from a user should get an immediate response."</p>
-
+    <p class="pull-quote reveal" style="text-align:center;max-width:640px;margin:0 auto 60px;" data-key="work1.loop_quote">"Every active behavior from a user should get an immediate response."</p>
     <div class="loop-wrap reveal">
-      <svg class="loop-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#1e1e1e"/>
-          </marker>
-        </defs>
-        <path d="M215,62 Q300,95 338,200" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
-        <path d="M338,215 Q300,315 215,343" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
-        <path d="M185,343 Q95,315 62,215" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
-        <path d="M62,185 Q95,80 185,62" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/>
-        <circle cx="200" cy="55" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
-        <text x="200" y="61" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">1</text>
-        <circle cx="345" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
-        <text x="345" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">2</text>
-        <circle cx="200" cy="345" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
-        <text x="200" y="352" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">3</text>
-        <circle cx="55" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/>
-        <text x="55" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">4</text>
-      </svg>
+      <svg class="loop-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#1e1e1e"/></marker></defs><path d="M215,62 Q300,95 338,200" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/><path d="M338,215 Q300,315 215,343" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/><path d="M185,343 Q95,315 62,215" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/><path d="M62,185 Q95,80 185,62" fill="none" stroke="#1e1e1e" stroke-width="1.4" marker-end="url(#arrow)"/><circle cx="200" cy="55" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/><text x="200" y="61" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">1</text><circle cx="345" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/><text x="345" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">2</text><circle cx="200" cy="345" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/><text x="200" y="352" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">3</text><circle cx="55" cy="200" r="34" fill="#ffffff" stroke="#1e1e1e" stroke-width="1.2"/><text x="55" y="207" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-size="24" fill="#1e1e1e">4</text></svg>
       <div class="loop-cards">
-        <div class="loop-card"><div class="lc-num">1</div><div class="lc-action">First Purchase</div><div class="lc-feedback">Low price + gift</div><div class="lc-value">Enters brand's owned audience pool</div></div>
-        <div class="loop-card"><div class="lc-num">2</div><div class="lc-action">Receipt Upload</div><div class="lc-feedback">Points reward</div><div class="lc-value">Builds a return-visit habit</div></div>
-        <div class="loop-card"><div class="lc-num">3</div><div class="lc-action">Social Share</div><div class="lc-feedback">Prize-draw entry</div><div class="lc-value">Brings in new users</div></div>
-        <div class="loop-card"><div class="lc-num">4</div><div class="lc-action">Repeat Purchase</div><div class="lc-feedback">Double points</div><div class="lc-value">Increases LTV</div></div>
+        <div class="loop-card"><div class="lc-num">1</div><div class="lc-action" data-key="work1.loop1a">First Purchase</div><div class="lc-feedback" data-key="work1.loop1b">Low price + gift</div><div class="lc-value" data-key="work1.loop1c">Enters brand's owned audience pool</div></div>
+        <div class="loop-card"><div class="lc-num">2</div><div class="lc-action" data-key="work1.loop2a">Receipt Upload</div><div class="lc-feedback" data-key="work1.loop2b">Points reward</div><div class="lc-value" data-key="work1.loop2c">Builds a return-visit habit</div></div>
+        <div class="loop-card"><div class="lc-num">3</div><div class="lc-action" data-key="work1.loop3a">Social Share</div><div class="lc-feedback" data-key="work1.loop3b">Prize-draw entry</div><div class="lc-value" data-key="work1.loop3c">Brings in new users</div></div>
+        <div class="loop-card"><div class="lc-num">4</div><div class="lc-action" data-key="work1.loop4a">Repeat Purchase</div><div class="lc-feedback" data-key="work1.loop4b">Double points</div><div class="lc-value" data-key="work1.loop4c">Increases LTV</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-card reveal sec-alt"><div class="num">06</div><div class="q" data-key="work1.q6">Results: The Business Value Behind the Numbers</div></div>
+  <div class="sec-alt"><div class="wrap" style="padding-top:70px;"><div class="stat-grid reveal">
+    <div class="stat-card"><div class="s-num">1,694,000 ₽</div><div class="s-lbl" data-key="work1.stat1l">Retail Sales</div><div class="s-mean" data-key="work1.stat1m">Validated that "low price ≠ low quality" — users pay for quality</div></div>
+    <div class="stat-card"><div class="s-num">≈330K</div><div class="s-lbl" data-key="work1.stat2l">Total Online Impressions</div><div class="s-mean" data-key="work1.stat2m">Shorts drove 60%+, proving short video is the most efficient format for reaching first-timers</div></div>
+    <div class="stat-card"><div class="s-num">210</div><div class="s-lbl" data-key="work1.stat3l">New Retail Points</div><div class="s-mean" data-key="work1.stat3m">Expanded from specialist stores into supermarkets — niche to mainstream</div></div>
+    <div class="stat-card"><div class="s-num">15 · 8 · 30–100</div><div class="s-lbl" data-key="work1.stat4l">Roadshow Reach</div><div class="s-mean" data-key="work1.stat4m">15 events, 8 cities, 30–100 attendees/event — direct access to B2B decision-makers</div></div>
+    <div class="stat-card"><div class="s-num">+41%</div><div class="s-lbl" data-key="work1.stat5l">Receipt Uploads</div><div class="s-mean" data-key="work1.stat5m">Users shifted from one-time buyers to a reachable, long-term relationship</div></div>
+  </div></div></div>
+
+  <!-- ===================== WORK 2: 区域市场全链路协同运营 ===================== -->
+  <div style="margin-top: 120px; border-top: 2px solid var(--ink); padding-top: 60px;" class="reveal">
+    <div class="work-head" style="text-align: center;">
+      <div class="eyebrow" data-key="work2.eyebrow">Featured Work 2</div>
+      <h2 class="section-title" data-key="work2.title">区域市场全链路协同运营</h2>
+      <p style="font-size: 14px; color: var(--ink-soft); margin-top: 16px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-key="work2.sub">
+        OSO 增长飞轮 — 悬停每个节点查看完整策略与数据
+      </p>
+    </div>
+
+    <!-- 闭环视觉流程图 - 悬停展开 -->
+    <div class="oso-loop-visual" style="display: flex; align-items: stretch; justify-content: center; gap: 0; margin-bottom: 40px; flex-wrap: wrap; background: var(--bg-alt); padding: 28px 16px; border-radius: 2px;">
+      
+      <!-- 节点 1 -->
+      <div class="oso-node" style="flex: 1; min-width: 100px; padding: 18px 12px; text-align: center; background: var(--bg); border: 1.5px solid var(--ink); border-radius: 2px; cursor: pointer; position: relative;">
+        <div style="font-family: var(--serif); font-style: italic; font-size: 1.8rem; color: var(--ink);">❶</div>
+        <div style="font-weight: 600; font-size: 13px; margin: 4px 0 2px;" data-key="work2.node1">展会洞察</div>
+        <div style="font-size: 10px; color: var(--ink-soft);" data-key="work2.hover">悬停展开</div>
+        <div class="oso-popup" style="position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px); width: 320px; background: var(--bg); border: 1px solid var(--line); padding: 20px 22px; text-align: left; box-shadow: 0 16px 48px rgba(0,0,0,0.10); border-radius: 2px; opacity: 0; pointer-events: none; z-index: 20;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;" data-key="work2.pop1_title">❶ 展会与品牌事件</div>
+          <div style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 12px;" data-key="work2.pop1_desc">
+            统筹 <strong>3场大型展会</strong> + <strong>12场区域体验活动</strong>，触达 2,000+ 名行业客户及终端用户。
+          </div>
+          <div style="font-size: 12px; color: var(--ink); background: var(--bg-alt); padding: 10px 14px; border-left: 2px solid var(--ink); margin-bottom: 10px;" data-key="work2.pop1_data">
+            <strong>单场有效线索 50+</strong> · 订单环比 +18%
+          </div>
+          <div style="font-size: 11px; color: var(--ink-faint);">
+            <span style="display: inline-block; background: var(--bg-alt); padding: 2px 10px; border-radius: 12px;" data-key="work2.pop1_flow">▼ 产出洞察 → 指导渠道选品</span>
+          </div>
+          <div style="margin-top: 10px; background: var(--bg-alt); height: 60px; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--ink-faint); letter-spacing: 0.04em; overflow: hidden;">
+            <img src="https://imgur.com/waYfhlD.png" alt="展会" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';this.parentElement.innerHTML='📷 展会现场'">
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 6px; min-width: 30px; color: var(--ink-faint);">
+        <span style="font-size: 18px;">→</span>
+        <span style="font-size: 8px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);" data-key="work2.arrow1">指导</span>
+      </div>
+      
+      <!-- 节点 2 -->
+      <div class="oso-node" style="flex: 1; min-width: 100px; padding: 18px 12px; text-align: center; background: var(--bg); border: 1.5px solid var(--ink); border-radius: 2px; cursor: pointer; position: relative;">
+        <div style="font-family: var(--serif); font-style: italic; font-size: 1.8rem; color: var(--ink);">❷</div>
+        <div style="font-weight: 600; font-size: 13px; margin: 4px 0 2px;" data-key="work2.node2">渠道转化</div>
+        <div style="font-size: 10px; color: var(--ink-soft);" data-key="work2.hover">悬停展开</div>
+        <div class="oso-popup" style="position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px); width: 320px; background: var(--bg); border: 1px solid var(--line); padding: 20px 22px; text-align: left; box-shadow: 0 16px 48px rgba(0,0,0,0.10); border-radius: 2px; opacity: 0; pointer-events: none; z-index: 20;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;" data-key="work2.pop2_title">❷ 渠道折扣与促销策略</div>
+          <div style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 12px;" data-key="work2.pop2_desc">
+            对 <strong>15+ 分销商</strong> 实行分层折扣（核心/潜力/新开），替代一刀切模式。
+          </div>
+          <div style="font-size: 12px; color: var(--ink); background: var(--bg-alt); padding: 10px 14px; border-left: 2px solid var(--ink); margin-bottom: 10px;" data-key="work2.pop2_data">
+            <strong>ROI +15%</strong> · 出货量 +22%
+          </div>
+          <div style="font-size: 11px; color: var(--ink-faint);">
+            <span style="display: inline-block; background: var(--bg-alt); padding: 2px 10px; border-radius: 12px;" data-key="work2.pop2_flow">▼ 策略输出 → 团队执行落地</span>
+          </div>
+          <div style="margin-top: 10px; background: var(--bg-alt); height: 60px; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--ink-faint); letter-spacing: 0.04em; overflow: hidden;">
+            <img src="https://imgur.com/TF0qf2h.png" alt="渠道策略" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';this.parentElement.innerHTML='📊 渠道数据'">
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 6px; min-width: 30px; color: var(--ink-faint);">
+        <span style="font-size: 18px;">→</span>
+        <span style="font-size: 8px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);" data-key="work2.arrow2">保障</span>
+      </div>
+      
+      <!-- 节点 3 -->
+      <div class="oso-node" style="flex: 1; min-width: 100px; padding: 18px 12px; text-align: center; background: var(--bg); border: 1.5px solid var(--ink); border-radius: 2px; cursor: pointer; position: relative;">
+        <div style="font-family: var(--serif); font-style: italic; font-size: 1.8rem; color: var(--ink);">❸</div>
+        <div style="font-weight: 600; font-size: 13px; margin: 4px 0 2px;" data-key="work2.node3">团队执行</div>
+        <div style="font-size: 10px; color: var(--ink-soft);" data-key="work2.hover">悬停展开</div>
+        <div class="oso-popup" style="position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px); width: 320px; background: var(--bg); border: 1px solid var(--line); padding: 20px 22px; text-align: left; box-shadow: 0 16px 48px rgba(0,0,0,0.10); border-radius: 2px; opacity: 0; pointer-events: none; z-index: 20;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;" data-key="work2.pop3_title">❸ 本地化团队管理与赋能</div>
+          <div style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 12px;" data-key="work2.pop3_desc">
+            从 0 搭建 <strong>9+ 人本地团队</strong>，建立总部与区域信息流转机制。
+          </div>
+          <div style="font-size: 12px; color: var(--ink); background: var(--bg-alt); padding: 10px 14px; border-left: 2px solid var(--ink); margin-bottom: 10px;" data-key="work2.pop3_data">
+            <strong>交付准时率 95%</strong> · 12项方案被采纳
+          </div>
+          <div style="font-size: 11px; color: var(--ink-faint);">
+            <span style="display: inline-block; background: var(--bg-alt); padding: 2px 10px; border-radius: 12px;" data-key="work2.pop3_flow">⤴ 执行数据 → 反哺展会选品</span>
+          </div>
+          <div style="margin-top: 10px; background: var(--bg-alt); height: 60px; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--ink-faint); letter-spacing: 0.04em; overflow: hidden;">
+            <img src="https://imgur.com/3CKPaBH.png" alt="团队管理" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';this.parentElement.innerHTML='👥 团队合照'">
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 6px; min-width: 30px; color: var(--ink-faint);">
+        <span style="font-size: 18px;">→</span>
+        <span style="font-size: 8px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);" data-key="work2.arrow3">反哺</span>
+      </div>
+      
+      <!-- 闭环节点 -->
+      <div class="oso-node" style="flex: 0.8; min-width: 80px; padding: 18px 8px; text-align: center; background: var(--bg-alt); border: 1.5px dashed var(--ink-faint); border-radius: 2px; cursor: pointer; position: relative;">
+        <div style="font-size: 22px; color: var(--ink-faint);">↺</div>
+        <div style="font-weight: 600; font-size: 12px; margin: 4px 0 2px; color: var(--ink-soft);" data-key="work2.node4">闭环反哺</div>
+        <div style="font-size: 9px; color: var(--ink-faint);" data-key="work2.hover">悬停展开</div>
+        <div class="oso-popup" style="position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px); width: 280px; background: var(--bg); border: 1px solid var(--line); padding: 20px 22px; text-align: left; box-shadow: 0 16px 48px rgba(0,0,0,0.10); border-radius: 2px; opacity: 0; pointer-events: none; z-index: 20;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;" data-key="work2.pop4_title">🔄 完整闭环</div>
+          <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);" data-key="work2.pop4_desc">
+            展会洞察 → 渠道策略 → 团队执行 → <strong>数据反哺</strong> → 下一轮展会
+          </div>
+          <div style="font-size: 12px; color: var(--ink); background: var(--bg-alt); padding: 10px 14px; border-left: 2px solid var(--ink); margin-top: 10px;" data-key="work2.pop4_data">
+            执行数据回流，优化下一轮选品与促销节奏
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="reveal" style="margin-bottom:60px;">
-      <div class="block-label" style="text-align:center;">Why a "Dual-Balance" Account?</div>
-      <ul class="why-order">
-        <li><strong>Points</strong> are a universal currency for everyone — low barrier, easy to understand</li>
-        <li><strong>Rubles</strong> are reserved for sales staff only — creating exclusivity, so B2B partners feel distinct from ordinary users</li>
-      </ul>
+    <!-- 闭环总结 -->
+    <div class="oso-loop-summary reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 24px; padding: 20px 16px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 12px; background: var(--bg-alt);">
+      <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: var(--ink-soft);" data-key="work2.loop_label">🔄 完整闭环</span>
+      <span style="font-size: 12px; color: var(--ink);" data-key="work2.loop1">展会洞察</span>
+      <span style="color: var(--ink-faint);">→</span>
+      <span style="font-size: 12px; color: var(--ink);" data-key="work2.loop2">渠道策略</span>
+      <span style="color: var(--ink-faint);">→</span>
+      <span style="font-size: 12px; color: var(--ink);" data-key="work2.loop3">团队执行</span>
+      <span style="color: var(--ink-faint);">→</span>
+      <span style="font-size: 12px; color: var(--ink);" data-key="work2.loop4">数据反哺</span>
+      <span style="color: var(--ink-faint);">→</span>
+      <span style="font-size: 12px; font-weight: 500; color: var(--ink);" data-key="work2.loop5">展会洞察</span>
+      <span style="font-size: 10px; color: var(--ink-faint); letter-spacing: 0.04em; background: var(--bg); padding: 2px 12px; border-radius: 20px; border: 1px solid var(--line);" data-key="work2.loop_badge">闭环</span>
     </div>
-
-    <!-- 已删除 https://imgur.com/Q7OoVpq 和 https://imgur.com/yZFPTNa 两张图片 -->
-  </div>
-
-  <!-- 06 -->
-  <div class="title-card reveal sec-alt">
-    <div class="num">06</div>
-    <div class="q">Results: The Business Value Behind the Numbers</div>
-  </div>
-  <div class="sec-alt">
-    <div class="wrap" style="padding-top:70px;">
-      <div class="stat-grid reveal">
-        <div class="stat-card"><div class="s-num">1,694,000 ₽</div><div class="s-lbl">Retail Sales</div><div class="s-mean">Validated that "low price ≠ low quality" — users pay for quality</div></div>
-        <div class="stat-card"><div class="s-num">≈330K</div><div class="s-lbl">Total Online Impressions</div><div class="s-mean">Shorts drove 60%+, proving short video is the most efficient format for reaching first-timers</div></div>
-        <div class="stat-card"><div class="s-num">210</div><div class="s-lbl">New Retail Points</div><div class="s-mean">Expanded from specialist stores into supermarkets — niche to mainstream</div></div>
-        <div class="stat-card"><div class="s-num">15 · 8 · 30–100</div><div class="s-lbl">Roadshow Reach</div><div class="s-mean">15 events, 8 cities, 30–100 attendees/event — direct access to B2B decision-makers</div></div>
-        <div class="stat-card"><div class="s-num">+41%</div><div class="s-lbl">Receipt Uploads</div><div class="s-mean">Users shifted from one-time buyers to a reachable, long-term relationship</div></div>
-      </div>
+    <div class="oso-tagline reveal" style="text-align: center; font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 1.6vw, 1.3rem); color: var(--ink-soft); margin-top: 8px;" data-key="work2.tagline">
+      “悬停每个节点，查看完整策略与数据 —— 三轮驱动，形成区域市场运营闭环”
     </div>
   </div>
 </section>
@@ -557,8 +522,8 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="eyebrow reveal">Get In Touch</div>
-    <h2 class="reveal">Let's build something<br>worth talking about.</h2>
+    <div class="eyebrow reveal" data-key="contact.eyebrow">Get In Touch</div>
+    <h2 class="reveal" data-key="contact.title">Let's build something<br>worth talking about.</h2>
     <div class="contact-list reveal">
       <a class="contact-item" href="mailto:zhangbaiyang927@gmail.com">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
@@ -582,6 +547,7 @@
 </footer>
 
 <script>
+  // 跑马灯
   const skills = ["Team Collaboration","Cross-cultural Communication","Project Coordination","Problem Solving","Strategic Planning","Google Analytics","Telegram","HubSpot","Tableau","Claude","Vape Club Show","Staff Training","In-store Roadshows"];
   const track = document.getElementById('marqueeTrack');
   function buildMarquee(){
@@ -591,21 +557,191 @@
   }
   buildMarquee();
 
+  // 画廊
   const galleryIds = ["MkowI0T","RysdfgT","nUe1mw0","q4LssnT","IejyBm8"];
   const strip = document.getElementById('galleryStrip');
   strip.innerHTML = galleryIds.map((id,i)=>`
     <div class="g-img">
-      <img src="https://i.imgur.com/${id}.jpg" alt="Campaign asset ${i+1}"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <img src="https://i.imgur.com/${id}.jpg" alt="Campaign asset ${i+1}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
       <div class="fallback" style="display:none;">Campaign Asset ${i+1}</div>
     </div>`).join('');
 
+  // 滚动动画
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
   }, {threshold:0.1});
   revealEls.forEach(el=>io.observe(el));
-</script>
 
+  // ---------- 中英文翻译 ----------
+  const translations = {
+    'zh': {
+      'nav.cta': '联系我',
+      'nav.about': '关于',
+      'nav.work': '作品',
+      'nav.contact': '联系',
+      'hero.eyebrow': '市场营销专家',
+      'hero.role': '跨品牌、渠道与内容的营销策略师 — 为进入复杂区域市场的消费品牌构建清晰度与增长势能。',
+      'hero.kw1': '品牌架构',
+      'hero.kw2': '创意内容',
+      'hero.kw3': '故事叙述',
+      'hero.kw4': '艺术指导',
+      'about.name': '你好，我是 Maddy Zhang。',
+      'about.p1': '一个由好奇心驱动、扎根于实践的市场营销人。我相信营销从不只是策略或战术——其核心是理解人并建立真实的连接。',
+      'about.p2': '我保持开放，通过写作、电影制作和项目工作，通过会议和展览，与不同领域的人交流，让他们的视角打磨我自己的思考。',
+      'about.p3': '工作之外，我热爱音乐、旅行和摄影，总是追逐那些激发创意与美感的小瞬间。我相信最好的想法诞生于观察和对话。',
+      'about.p4': '当你站在文化的交汇处，让不同的观点碰撞，好奇心和开放心态自然会生长。我随时准备迎接下一个机会——也总是乐于遇见志同道合的人。',
+      'work.eyebrow': '精选作品',
+      'work.title': '从0到1',
+      'work1.title': 'WORK 1：从0到1 — 一场针对"价格敏感型新手"的IMC精准战役',
+      'work1.tag1': '整合营销',
+      'work1.tag2': '新品上市',
+      'work1.tag3': '全链路闭环',
+      'work1.tag4': 'B端渠道激活',
+      'work1.q1': '为什么要做这件事？',
+      'work1.quote': '"市场不缺好产品——缺的是让用户敢于尝试的理由。"',
+      'work1.p1': '俄罗斯的新型烟草替代品市场正在快速增长，但用户心智层已相当拥挤。主流品牌扎堆在"高性能"定位上，用复杂的参数和溢价争夺存量用户——却忽视了最大的增量池。',
+      'work1.p2': '<strong>价格敏感型新用户</strong>想要尝试新形态产品，但面临两大障碍：',
+      'work1.b1': '<strong>认知障碍</strong> — 参数混乱，品类不清，"什么适合我"是个谜',
+      'work1.b2': '<strong>价格障碍</strong> — 不愿为不确定是否喜欢的商品支付溢价',
+      'work1.conclusion': '结论',
+      'work1.conclusion_text': '我们的品牌资产集中在<strong>技术创新</strong>上——但在主流认知中缺乏亲和力。这款产品的使命从来不是成为"便宜货"，而是成为品牌与新用户的<strong>第一个接触点</strong>。',
+      'work1.chain': '核心逻辑链',
+      'work1.chain1': '低价',
+      'work1.chain1d': '消除决策风险',
+      'work1.chain2': '产品',
+      'work1.chain2d': '建立信任',
+      'work1.chain3': 'Bot系统',
+      'work1.chain3d': '积累长期价值',
+      'work1.q2': '策略逻辑',
+      'work1.oneline_label': '一句话策略',
+      'work1.oneline': '"用一次低成本尝试，换一个长期用户。"',
+      'work1.f1_name': '表层',
+      'work1.f1_logic': '价格驱动',
+      'work1.f1_action': '首发定价 + 赠品机制，降低首次尝试的心理门槛',
+      'work1.f2_name': '中层',
+      'work1.f2_logic': '体验驱动',
+      'work1.f2_action': '线下路演 + 品鉴活动，把"看见"变成"尝试"',
+      'work1.f3_name': '深层',
+      'work1.f3_logic': '关系驱动',
+      'work1.f3_action': 'Bot积分体系，把"单次购买"变成"持续连接"',
+      'work1.why_label': '为什么是这个顺序？',
+      'work1.why1': '<strong>价格是钩子</strong> — 没有低门槛，目标用户根本不会注意到品牌',
+      'work1.why2': '<strong>体验是转化器</strong> — 只有亲身体验后，"低价≠低质"才变得可信',
+      'work1.why3': '<strong>关系是护城河</strong> — 竞品可以复制价格，但复制不了已经形成的用户习惯',
+      'work1.q3': '线上营销矩阵',
+      'work1.matrix_quote': '不是"发布内容"——而是设计一段旅程。',
+      'work1.m1_head': 'Telegram / 品牌Bot',
+      'work1.m1_what_label': '我们做了什么',
+      'work1.m1_what': '首发专属优惠券 + 抽奖机制 + 小票上传流程',
+      'work1.m1_why_label': '为什么有效',
+      'work1.m1_why1': '优惠券回答：为什么 <em>现在</em> 买',
+      'work1.m1_why2': '抽奖回答：为什么 <em>分享</em>',
+      'work1.m1_why3': '小票上传回答：如何将线下买家转化为可触达的线上用户',
+      'work1.m1_detail': '关键细节——优惠券设7天有效期，制造温和的紧迫感，避免"以后再买"。',
+      'work1.assets_label': 'Campaign素材',
+      'work1.q4': '线下：精准B2B2C渗透',
+      'work1.offline_quote': '"不是让B2B为品牌卖货——而是帮助B2B更好地服务他们自己的客户。"',
+      'work1.offline_label': 'Maverick & OXVA 品鉴会的启示',
+      'work1.offline_p': 'Maverick有零售网络但缺乏品牌认知；OXVA有成熟产品线但区域渗透有限——一次直接的优势互换。',
+      'work1.offline_city_label': '为什么选新西伯利亚？',
+      'work1.offline_city1': '不是一线城市（莫斯科/圣彼得堡），竞争压力较小',
+      'work1.offline_city2': '区域用户对新品牌更开放，先发者优势明显',
+      'work1.offline_city3': 'Maverick在当地已有成熟的零售网络',
+      'work1.q5': '闭环机制',
+      'work1.loop_quote': '"用户的每一个活跃行为，都应得到即时反馈。"',
+      'work1.loop1a': '首次购买',
+      'work1.loop1b': '低价+赠品',
+      'work1.loop1c': '进入品牌自有用户池',
+      'work1.loop2a': '上传小票',
+      'work1.loop2b': '积分奖励',
+      'work1.loop2c': '培养回访习惯',
+      'work1.loop3a': '社交分享',
+      'work1.loop3b': '抽奖机会',
+      'work1.loop3c': '带来新用户',
+      'work1.loop4a': '复购',
+      'work1.loop4b': '双倍积分',
+      'work1.loop4c': '提升用户生命周期价值',
+      'work1.q6': '结果：数字背后的商业价值',
+      'work1.stat1l': '零售销售额',
+      'work1.stat1m': '验证了"低价≠低质"——用户愿意为品质买单',
+      'work1.stat2l': '线上总曝光',
+      'work1.stat2m': '短视频贡献60%+，证明短视频是触达新用户最高效的形式',
+      'work1.stat3l': '新增零售点',
+      'work1.stat3m': '从专卖店扩展至超市——从小众到主流',
+      'work1.stat4l': '路演触达',
+      'work1.stat4m': '15场活动，8座城市，每场30-100人——直接触达B2B决策者',
+      'work1.stat5l': '小票上传量',
+      'work1.stat5m': '用户从一次性买家转变为可触达的长期关系',
+      'work2.eyebrow': '精选作品 2',
+      'work2.title': '区域市场全链路协同运营',
+      'work2.sub': 'OSO 增长飞轮 — 悬停每个节点查看完整策略与数据',
+      'work2.node1': '展会洞察',
+      'work2.node2': '渠道转化',
+      'work2.node3': '团队执行',
+      'work2.node4': '闭环反哺',
+      'work2.hover': '悬停展开',
+      'work2.arrow1': '指导',
+      'work2.arrow2': '保障',
+      'work2.arrow3': '反哺',
+      'work2.pop1_title': '❶ 展会与品牌事件',
+      'work2.pop1_desc': '统筹 <strong>3场大型展会</strong> + <strong>12场区域体验活动</strong>，触达 2,000+ 名行业客户及终端用户。',
+      'work2.pop1_data': '<strong>单场有效线索 50+</strong> · 订单环比 +18%',
+      'work2.pop1_flow': '▼ 产出洞察 → 指导渠道选品',
+      'work2.pop2_title': '❷ 渠道折扣与促销策略',
+      'work2.pop2_desc': '对 <strong>15+ 分销商</strong> 实行分层折扣（核心/潜力/新开），替代一刀切模式。',
+      'work2.pop2_data': '<strong>ROI +15%</strong> · 出货量 +22%',
+      'work2.pop2_flow': '▼ 策略输出 → 团队执行落地',
+      'work2.pop3_title': '❸ 本地化团队管理与赋能',
+      'work2.pop3_desc': '从 0 搭建 <strong>9+ 人本地团队</strong>，建立总部与区域信息流转机制。',
+      'work2.pop3_data': '<strong>交付准时率 95%</strong> · 12项方案被采纳',
+      'work2.pop3_flow': '⤴ 执行数据 → 反哺展会选品',
+      'work2.pop4_title': '🔄 完整闭环',
+      'work2.pop4_desc': '展会洞察 → 渠道策略 → 团队执行 → <strong>数据反哺</strong> → 下一轮展会',
+      'work2.pop4_data': '执行数据回流，优化下一轮选品与促销节奏',
+      'work2.loop_label': '🔄 完整闭环',
+      'work2.loop1': '展会洞察',
+      'work2.loop2': '渠道策略',
+      'work2.loop3': '团队执行',
+      'work2.loop4': '数据反哺',
+      'work2.loop5': '展会洞察',
+      'work2.loop_badge': '闭环',
+      'work2.tagline': '“悬停每个节点，查看完整策略与数据 —— 三轮驱动，形成区域市场运营闭环”',
+      'contact.eyebrow': '联系我',
+      'contact.title': '一起打造<br>值得谈论的作品。'
+    }
+  };
+
+  let currentLang = 'en';
+  const toggleBtn = document.getElementById('langToggle');
+
+  function applyLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (t[key] !== undefined) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = t[key];
+        } else {
+          el.innerHTML = t[key];
+        }
+      }
+    });
+    toggleBtn.textContent = lang === 'zh' ? 'English' : '中文';
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    currentLang = lang;
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    applyLanguage(currentLang === 'en' ? 'zh' : 'en');
+  });
+
+  // 初始加载时检测浏览器语言
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  if (browserLang.startsWith('zh')) {
+    applyLanguage('zh');
+  }
+</script>
 </body>
 </html>
